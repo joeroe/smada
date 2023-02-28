@@ -1,0 +1,41 @@
+---
+title: "Course overview"
+---
+
+*Statistical Methods for Archaeological Data Analysis (SMADA)*  
+*Spring semester, 2023 (FS2023)*
+
+Statistics has become an indispensable tool in prehistoric archaeology. This course is intended on the one hand to give the participants the skills to understand and reproduce statistical analyses in literature and on the other hand to enable them to use such analyses for their scientific work themselves.
+
+Basic statistical concepts will be explained and simple uni- and bivariate methods of descriptive, explorative and inductive statistics will be presented. An important part is the practical application of these methods. This is to be carried out with the help of the statistics software R, a open source and free-of-charge, yet extremely powerful computing environment.
+
+The course will be taught in English.
+It is suitable for students of all semesters; no statistical knowledge or expertise in special computer programs is required.
+
+## Learning objectives
+
+The aim of this course is to provide students with the skills to understand and reproduce statistical analyses of archaeological data.
+By the end of this course, they should:
+
+* Be familiar with the fundamental concepts of exporatory data analysis (EDA), frequentist hypothesis-testing, regression modelling, and multivariate analysis
+* Be proficient enough in R programming to reproduce a full data science workflow, including data import, transformation, and analysis
+* Be able to independently locate learning resources and troubleshoot problems in R code in order to extend the range of statistical procedures they can perform in future
+
+## Instructors
+
+![](images/joe_roe.png){width=3em}
+**[Joe Roe](https://www.iaw.unibe.ch/about_us/arp__pa_personen/ma_roe_joe/index_eng.html)** <<joseph.roe@iaw.unibe.ch>>
+
+## Learning format
+
+The primary format of instruction will be practical tutorials, where students will be given a foundation in new concepts in self-guided, computer-based exercises, and consolidate their skills through extended problem sets.
+During contact hours the instructor will be on hand to problem solve and explain more complex concepts; open discussion is welcome and encouraged!
+It is expected that these tutorials will take longer than the time allotted for the class to complete, i.e. they are also homework.
+
+Relevent background material will be introduced in readings, pre-recorded videos and other resources, which students are expected to have studied *before* each weekly tutorial.
+
+## Evaluation
+
+Students are asked to maintain a 'knowledge base' (*Zettelkasten*) of notes on the key concepts they learn from the background material and tutorials as the main output of the course and the basis for evaluation.
+The exact format of the *Zettelkasten* is up to the individual student.
+More details will be provided over the course of the semester.

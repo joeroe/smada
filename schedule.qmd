@@ -1,0 +1,25 @@
+---
+title: "Schedule"
+---
+
+| Week | Tutorial                         | Prerequisites |
+|------|----------------------------------|---------------|
+| 09   | [Introduction](tutorials/introduction.qmd) | ---           |
+|      | **Exploring archaeological data**                |
+| 10   | [Exploring data with R](tutorials/eda_with_r.qmd)       | [{{< fa link >}}Evergreen notes](https://notes.andymatuschak.org/Evergreen_notes)<br>[Install R](https://cran.r-project.org/) on your computer |
+| 11   | Visualising distributions        | ---           |
+| 12   | Visualising relationships        | ---           |
+| 13   | Summary statistics               | ---           |
+|      | **Working with archaeological data**             |
+| 14   | Importing and transforming data  | ---           |
+| 15   | *Spring vacation*                | ---           |
+| 16   | Data analysis workflows          | ---           |
+| 17   | Replication Workshop I           | ---           |
+| 18   | Replication Workshop II          | ---           |
+|      | **Modelling archaeological data**                |
+| 19   | Hypothesis testing               | ---           |
+| 20   | Regression                       | ---           |
+| 21*  | Multivariate analysis            | ---           |
+| 22   | Review & course evaluation       | ---           |
+
+\* Substitute instructor

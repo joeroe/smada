@@ -1,0 +1,8 @@
+---
+title: "Bibliography & Further Reading"
+---
+
+## Archaeostatistics textbooks
+
+* **Shennan, S. 1997. *Quantifying Archaeology*. Second edition.**
+* Drennan, R. D. *Statistics for Archaeologists: A Commonsense Approach*. Second edition.

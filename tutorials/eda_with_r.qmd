@@ -1,0 +1,24 @@
+---
+title: "Exploring data with R"
+---
+
+In this tutorial we will look deeper at the R programming language and how it can be used for exploratory data analysis (EDA).
+
+## Objectives
+
+By the end of this tutorial, you should:
+
+* Recognise the building blocks of the R environment: objects, values, and functions.
+* Use the R console to load a dataset, calculate a statistic and produce a plot
+* Begin your *Zettelkästen* with notes on the key pieces of R syntax you have learned
+
+## Prerequisites
+
+* Andy Matuschak, '[Evergreen notes](https://notes.andymatuschak.org/Evergreen_notes)'
+* [Install R](https://cran.r-project.org/) on your computer
+
+## Key concepts
+
+## Foundation
+
+## Extensions

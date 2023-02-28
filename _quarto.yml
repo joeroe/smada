@@ -1,0 +1,55 @@
+project:
+  type: website
+
+website:
+  title: "Statistical Methods for Archaeological Data Analysis [FS2023]"
+
+  page-navigation: true
+  repo-url: "https://github.com/joeroe/smada"
+  repo-actions: [source, issue]
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Overview"
+      - href: info.qmd
+        text: "Information"
+      - href: schedule.qmd
+        text: "Schedule"
+      - sidebar:tutorials
+      - href: bibliography.qmd
+        text: "Bibliography"
+
+  sidebar:
+    - title: "Home"
+    - id: tutorials
+      title: "Tutorials"
+      style: docked
+      contents:
+        - tutorials/introduction.qmd
+        - section: "Exploring archaeological data"
+          contents:
+            - tutorials/eda_with_r.qmd
+            - tutorials/.visualising_distributions.qmd
+            - tutorials/.visualising_relationships.qmd
+            - tutorials/.summary_statistics.qmd
+        - section: "Working with archaeological data"
+          contents:
+            - tutorials/.tidy_data.qmd
+            - tutorials/.workflows.qmd
+            - tutorials/.replication.qmd
+        - section: "Modelling archaeological data"
+          contents:
+            - tutorials/.testing.qmd
+            - tutorials/.regression.qmd
+            - tutorials/.multivariate.qmd
+        - tutorials/.review.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
