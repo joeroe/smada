@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "Information for students",
+    "section": "",
+    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
+  },
+  {
+    "objectID": "info.html#access-accommodations",
+    "href": "info.html#access-accommodations",
+    "title": "Information for students",
+    "section": "Access & accommodations",
+    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
+  },
+  {
+    "objectID": "info.html#academic-integrity",
+    "href": "info.html#academic-integrity",
+    "title": "Information for students",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
+  },
+  {
+    "objectID": "info.html#mental-health",
+    "href": "info.html#mental-health",
+    "title": "Information for students",
+    "section": "Mental health",
+    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html",
+    "href": "tutorials/eda_with_r.html",
+    "title": "Exploring data with R",
+    "section": "",
+    "text": "In this tutorial we will look deeper at the R programming language and how it can be used for exploratory data analysis (EDA)."
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#objectives",
+    "href": "tutorials/eda_with_r.html#objectives",
+    "title": "Exploring data with R",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this tutorial, you should:\n\nRecognise the building blocks of the R environment: objects, values, and functions.\nUse the R console to load a dataset, calculate a statistic and produce a plot\nBegin your Zettelkästen with notes on the key pieces of R syntax you have learned"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#prerequisites",
+    "href": "tutorials/eda_with_r.html#prerequisites",
+    "title": "Exploring data with R",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nAndy Matuschak, ‘Evergreen notes’\nInstall R on your computer"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#key-concepts",
+    "href": "tutorials/eda_with_r.html#key-concepts",
+    "title": "Exploring data with R",
+    "section": "Key concepts",
+    "text": "Key concepts"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#foundation",
+    "href": "tutorials/eda_with_r.html#foundation",
+    "title": "Exploring data with R",
+    "section": "Foundation",
+    "text": "Foundation"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#extensions",
+    "href": "tutorials/eda_with_r.html#extensions",
+    "title": "Exploring data with R",
+    "section": "Extensions",
+    "text": "Extensions"
+  },
+  {
+    "objectID": "tutorials/introduction.html",
+    "href": "tutorials/introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "In this tutorial we will …"
+  },
+  {
+    "objectID": "tutorials/introduction.html#objectives",
+    "href": "tutorials/introduction.html#objectives",
+    "title": "Introduction",
+    "section": "Objectives",
+    "text": "Objectives"
+  },
+  {
+    "objectID": "tutorials/introduction.html#prerequisites",
+    "href": "tutorials/introduction.html#prerequisites",
+    "title": "Introduction",
+    "section": "Prerequisites",
+    "text": "Prerequisites"
+  },
+  {
+    "objectID": "tutorials/introduction.html#key-concepts",
+    "href": "tutorials/introduction.html#key-concepts",
+    "title": "Introduction",
+    "section": "Key concepts",
+    "text": "Key concepts"
+  },
+  {
+    "objectID": "tutorials/introduction.html#foundation",
+    "href": "tutorials/introduction.html#foundation",
+    "title": "Introduction",
+    "section": "Foundation",
+    "text": "Foundation"
+  },
+  {
+    "objectID": "tutorials/introduction.html#extensions",
+    "href": "tutorials/introduction.html#extensions",
+    "title": "Introduction",
+    "section": "Extensions",
+    "text": "Extensions"
+  },
+  {
+    "objectID": "bibliography.html",
+    "href": "bibliography.html",
+    "title": "Bibliography & Further Reading",
+    "section": "",
+    "text": "Shennan, S. 1997. Quantifying Archaeology. Second edition.\nDrennan, R. D. Statistics for Archaeologists: A Commonsense Approach. Second edition."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Statistical Methods for Archaeological Data Analysis (SMADA)\nSpring semester, 2023 (FS2023)\nStatistics has become an indispensable tool in prehistoric archaeology. This course is intended on the one hand to give the participants the skills to understand and reproduce statistical analyses in literature and on the other hand to enable them to use such analyses for their scientific work themselves.\nBasic statistical concepts will be explained and simple uni- and bivariate methods of descriptive, explorative and inductive statistics will be presented. An important part is the practical application of these methods. This is to be carried out with the help of the statistics software R, a open source and free-of-charge, yet extremely powerful computing environment.\nThe course will be taught in English. It is suitable for students of all semesters; no statistical knowledge or expertise in special computer programs is required."
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "Course overview",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nThe aim of this course is to provide students with the skills to understand and reproduce statistical analyses of archaeological data. By the end of this course, they should:\n\nBe familiar with the fundamental concepts of exporatory data analysis (EDA), frequentist hypothesis-testing, regression modelling, and multivariate analysis\nBe proficient enough in R programming to reproduce a full data science workflow, including data import, transformation, and analysis\nBe able to independently locate learning resources and troubleshoot problems in R code in order to extend the range of statistical procedures they can perform in future"
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Course overview",
+    "section": "Instructors",
+    "text": "Instructors\n Joe Roe <joseph.roe@iaw.unibe.ch>"
+  },
+  {
+    "objectID": "index.html#learning-format",
+    "href": "index.html#learning-format",
+    "title": "Course overview",
+    "section": "Learning format",
+    "text": "Learning format\nThe primary format of instruction will be practical tutorials, where students will be given a foundation in new concepts in self-guided, computer-based exercises, and consolidate their skills through extended problem sets. During contact hours the instructor will be on hand to problem solve and explain more complex concepts; open discussion is welcome and encouraged! It is expected that these tutorials will take longer than the time allotted for the class to complete, i.e. they are also homework.\nRelevent background material will be introduced in readings, pre-recorded videos and other resources, which students are expected to have studied before each weekly tutorial."
+  },
+  {
+    "objectID": "index.html#evaluation",
+    "href": "index.html#evaluation",
+    "title": "Course overview",
+    "section": "Evaluation",
+    "text": "Evaluation\nStudents are asked to maintain a ‘knowledge base’ (Zettelkasten) of notes on the key concepts they learn from the background material and tutorials as the main output of the course and the basis for evaluation. The exact format of the Zettelkasten is up to the individual student. More details will be provided over the course of the semester."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week\nTutorial\nPrerequisites\n\n\n\n\n09\nIntroduction\n—\n\n\n\nExploring archaeological data\n\n\n\n10\nExploring data with R\nEvergreen notesInstall R on your computer\n\n\n11\nVisualising distributions\n—\n\n\n12\nVisualising relationships\n—\n\n\n13\nSummary statistics\n—\n\n\n\nWorking with archaeological data\n\n\n\n14\nImporting and transforming data\n—\n\n\n15\nSpring vacation\n—\n\n\n16\nData analysis workflows\n—\n\n\n17\nReplication Workshop I\n—\n\n\n18\nReplication Workshop II\n—\n\n\n\nModelling archaeological data\n\n\n\n19\nHypothesis testing\n—\n\n\n20\nRegression\n—\n\n\n21*\nMultivariate analysis\n—\n\n\n22\nReview & course evaluation\n—\n\n\n\n* Substitute instructor"
+  }
+]
