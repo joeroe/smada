@@ -28,6 +28,83 @@
     "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
   },
   {
+    "objectID": "bibliography.html",
+    "href": "bibliography.html",
+    "title": "Bibliography & Further Reading",
+    "section": "",
+    "text": "Shennan, S. 1997. Quantifying Archaeology. Second edition.\nDrennan, R. D. Statistics for Archaeologists: A Commonsense Approach. Second edition."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week\nTutorial\nPrerequisites\n\n\n\n\n09\nIntroduction\n—\n\n\n\nExploring archaeological data\n\n\n\n10\nExploring data with R\nEvergreen notesInstall R on your computer\n\n\n11\nVisualising distributions\n—\n\n\n12\nVisualising relationships\n—\n\n\n13\nSummary statistics\n—\n\n\n\nWorking with archaeological data\n\n\n\n14\nImporting and transforming data\n—\n\n\n15\nSpring vacation\n—\n\n\n16\nData analysis workflows\n—\n\n\n17\nReplication Workshop I\n—\n\n\n18\nReplication Workshop II\n—\n\n\n\nModelling archaeological data\n\n\n\n19\nHypothesis testing\n—\n\n\n20\nRegression\n—\n\n\n21*\nMultivariate analysis\n—\n\n\n22\nReview & course evaluation\n—\n\n\n\n* Substitute instructor"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Statistical Methods for Archaeological Data Analysis (SMADA)\nSpring semester, 2023 (FS2023)\nStatistics has become an indispensable tool in prehistoric archaeology. This course is intended on the one hand to give the participants the skills to understand and reproduce statistical analyses in literature and on the other hand to enable them to use such analyses for their scientific work themselves.\nBasic statistical concepts will be explained and simple uni- and bivariate methods of descriptive, explorative and inductive statistics will be presented. An important part is the practical application of these methods. This is to be carried out with the help of the statistics software R, a open source and free-of-charge, yet extremely powerful computing environment.\nThe course will be taught in English. It is suitable for students of all semesters; no statistical knowledge or expertise in special computer programs is required."
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "Course overview",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nThe aim of this course is to provide students with the skills to understand and reproduce statistical analyses of archaeological data. By the end of this course, they should:\n\nBe familiar with the fundamental concepts of exporatory data analysis (EDA), frequentist hypothesis-testing, regression modelling, and multivariate analysis\nBe proficient enough in R programming to reproduce a full data science workflow, including data import, transformation, and analysis\nBe able to independently locate learning resources and troubleshoot problems in R code in order to extend the range of statistical procedures they can perform in future"
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Course overview",
+    "section": "Instructors",
+    "text": "Instructors\n Joe Roe <joseph.roe@iaw.unibe.ch>"
+  },
+  {
+    "objectID": "index.html#learning-format",
+    "href": "index.html#learning-format",
+    "title": "Course overview",
+    "section": "Learning format",
+    "text": "Learning format\nThe primary format of instruction will be practical tutorials, where students will be given a foundation in new concepts in self-guided, computer-based exercises, and consolidate their skills through extended problem sets. During contact hours the instructor will be on hand to problem solve and explain more complex concepts; open discussion is welcome and encouraged! It is expected that these tutorials will take longer than the time allotted for the class to complete, i.e. they are also homework.\nRelevent background material will be introduced in readings, pre-recorded videos and other resources, which students are expected to have studied before each weekly tutorial."
+  },
+  {
+    "objectID": "index.html#evaluation",
+    "href": "index.html#evaluation",
+    "title": "Course overview",
+    "section": "Evaluation",
+    "text": "Evaluation\nStudents are asked to maintain a ‘knowledge base’ (Zettelkasten) of notes on the key concepts they learn from the background material and tutorials as the main output of the course and the basis for evaluation. The exact format of the Zettelkasten is up to the individual student. More details will be provided over the course of the semester."
+  },
+  {
+    "objectID": "tutorials/introduction.html",
+    "href": "tutorials/introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "In this tutorial we will discuss the role of statistics in archaeology, review some recent trends and current issues in archaeostatistics, and introduce the learning aims, format, and practicalities for the rest of the course."
+  },
+  {
+    "objectID": "tutorials/introduction.html#objectives",
+    "href": "tutorials/introduction.html#objectives",
+    "title": "Introduction",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this tutorial you should:\n\nUnderstand the theoretical context and ‘uses of abuses’ of statistics in archaeology\nBe familiar with current issues and trends in archaeostatistics\nCritically engage with a recent application of statistics in archaeology"
+  },
+  {
+    "objectID": "tutorials/introduction.html#prerequisites",
+    "href": "tutorials/introduction.html#prerequisites",
+    "title": "Introduction",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNone."
+  },
+  {
+    "objectID": "tutorials/introduction.html#mini-practical-moralizing-gods",
+    "href": "tutorials/introduction.html#mini-practical-moralizing-gods",
+    "title": "Introduction",
+    "section": "Mini-practical: ‘Moralizing Gods’",
+    "text": "Mini-practical: ‘Moralizing Gods’\n\nmoralizing_gods.csv – data from Whitehouse et al. 2019"
+  },
+  {
     "objectID": "tutorials/eda_with_r.html",
     "href": "tutorials/eda_with_r.html",
     "title": "Exploring data with R",
@@ -68,96 +145,5 @@
     "title": "Exploring data with R",
     "section": "Extensions",
     "text": "Extensions"
-  },
-  {
-    "objectID": "tutorials/introduction.html",
-    "href": "tutorials/introduction.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "In this tutorial we will …"
-  },
-  {
-    "objectID": "tutorials/introduction.html#objectives",
-    "href": "tutorials/introduction.html#objectives",
-    "title": "Introduction",
-    "section": "Objectives",
-    "text": "Objectives"
-  },
-  {
-    "objectID": "tutorials/introduction.html#prerequisites",
-    "href": "tutorials/introduction.html#prerequisites",
-    "title": "Introduction",
-    "section": "Prerequisites",
-    "text": "Prerequisites"
-  },
-  {
-    "objectID": "tutorials/introduction.html#key-concepts",
-    "href": "tutorials/introduction.html#key-concepts",
-    "title": "Introduction",
-    "section": "Key concepts",
-    "text": "Key concepts"
-  },
-  {
-    "objectID": "tutorials/introduction.html#foundation",
-    "href": "tutorials/introduction.html#foundation",
-    "title": "Introduction",
-    "section": "Foundation",
-    "text": "Foundation"
-  },
-  {
-    "objectID": "tutorials/introduction.html#extensions",
-    "href": "tutorials/introduction.html#extensions",
-    "title": "Introduction",
-    "section": "Extensions",
-    "text": "Extensions"
-  },
-  {
-    "objectID": "bibliography.html",
-    "href": "bibliography.html",
-    "title": "Bibliography & Further Reading",
-    "section": "",
-    "text": "Shennan, S. 1997. Quantifying Archaeology. Second edition.\nDrennan, R. D. Statistics for Archaeologists: A Commonsense Approach. Second edition."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "Statistical Methods for Archaeological Data Analysis (SMADA)\nSpring semester, 2023 (FS2023)\nStatistics has become an indispensable tool in prehistoric archaeology. This course is intended on the one hand to give the participants the skills to understand and reproduce statistical analyses in literature and on the other hand to enable them to use such analyses for their scientific work themselves.\nBasic statistical concepts will be explained and simple uni- and bivariate methods of descriptive, explorative and inductive statistics will be presented. An important part is the practical application of these methods. This is to be carried out with the help of the statistics software R, a open source and free-of-charge, yet extremely powerful computing environment.\nThe course will be taught in English. It is suitable for students of all semesters; no statistical knowledge or expertise in special computer programs is required."
-  },
-  {
-    "objectID": "index.html#learning-objectives",
-    "href": "index.html#learning-objectives",
-    "title": "Course overview",
-    "section": "Learning objectives",
-    "text": "Learning objectives\nThe aim of this course is to provide students with the skills to understand and reproduce statistical analyses of archaeological data. By the end of this course, they should:\n\nBe familiar with the fundamental concepts of exporatory data analysis (EDA), frequentist hypothesis-testing, regression modelling, and multivariate analysis\nBe proficient enough in R programming to reproduce a full data science workflow, including data import, transformation, and analysis\nBe able to independently locate learning resources and troubleshoot problems in R code in order to extend the range of statistical procedures they can perform in future"
-  },
-  {
-    "objectID": "index.html#instructors",
-    "href": "index.html#instructors",
-    "title": "Course overview",
-    "section": "Instructors",
-    "text": "Instructors\n Joe Roe <joseph.roe@iaw.unibe.ch>"
-  },
-  {
-    "objectID": "index.html#learning-format",
-    "href": "index.html#learning-format",
-    "title": "Course overview",
-    "section": "Learning format",
-    "text": "Learning format\nThe primary format of instruction will be practical tutorials, where students will be given a foundation in new concepts in self-guided, computer-based exercises, and consolidate their skills through extended problem sets. During contact hours the instructor will be on hand to problem solve and explain more complex concepts; open discussion is welcome and encouraged! It is expected that these tutorials will take longer than the time allotted for the class to complete, i.e. they are also homework.\nRelevent background material will be introduced in readings, pre-recorded videos and other resources, which students are expected to have studied before each weekly tutorial."
-  },
-  {
-    "objectID": "index.html#evaluation",
-    "href": "index.html#evaluation",
-    "title": "Course overview",
-    "section": "Evaluation",
-    "text": "Evaluation\nStudents are asked to maintain a ‘knowledge base’ (Zettelkasten) of notes on the key concepts they learn from the background material and tutorials as the main output of the course and the basis for evaluation. The exact format of the Zettelkasten is up to the individual student. More details will be provided over the course of the semester."
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Week\nTutorial\nPrerequisites\n\n\n\n\n09\nIntroduction\n—\n\n\n\nExploring archaeological data\n\n\n\n10\nExploring data with R\nEvergreen notesInstall R on your computer\n\n\n11\nVisualising distributions\n—\n\n\n12\nVisualising relationships\n—\n\n\n13\nSummary statistics\n—\n\n\n\nWorking with archaeological data\n\n\n\n14\nImporting and transforming data\n—\n\n\n15\nSpring vacation\n—\n\n\n16\nData analysis workflows\n—\n\n\n17\nReplication Workshop I\n—\n\n\n18\nReplication Workshop II\n—\n\n\n\nModelling archaeological data\n\n\n\n19\nHypothesis testing\n—\n\n\n20\nRegression\n—\n\n\n21*\nMultivariate analysis\n—\n\n\n22\nReview & course evaluation\n—\n\n\n\n* Substitute instructor"
   }
 ]
