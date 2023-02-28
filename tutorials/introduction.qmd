@@ -2,14 +2,20 @@
 title: "Introduction"
 ---
 
-In this tutorial we will ...
+In this tutorial we will discuss the role of statistics in archaeology, review some recent trends and current issues in archaeostatistics, and introduce the learning aims, format, and practicalities for the rest of the course.
 
 ## Objectives
 
+By the end of this tutorial you should:
+
+* Understand the theoretical context and 'uses of abuses' of statistics in archaeology
+* Be familiar with current issues and trends in archaeostatistics
+* Critically engage with a recent application of statistics in archaeology
+
 ## Prerequisites
 
-## Key concepts
+None.
 
-## Foundation
+## Mini-practical: 'Moralizing Gods'
 
-## Extensions
+* [moralizing_gods.csv](data/moralizing_gods.csv) – data from [Whitehouse et al. 2019](https://www.nature.com/articles/s41586-019-1043-4)
