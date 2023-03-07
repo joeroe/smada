@@ -7,10 +7,13 @@ It introduces the package [ggplot2](https://ggplot2.tidyverse.org/), which provi
 
 This tutorial focuses on visualising the <mark>distribution</mark> of data using bar plots, histograms, and density plots.
 
+## Prerequisites
+
+* Hadley Wickham, [The Role of Visualization in Exploratory Data Analysis](https://www.youtube.com/watch?v=ZdPNBF6GWBw) (video)
+
 <!--
 ## Objectives
 
-## Prerequisites
 
 ## Key concepts
 
