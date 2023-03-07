@@ -1,0 +1,20 @@
+---
+title: "Visualising distributions"
+---
+
+This tutorial is the first of two covering visualisations as a tool for exploratory data analysis. 
+It introduces the package [ggplot2](https://ggplot2.tidyverse.org/), which provides a flexible 'grammar of graphics' for visualising data in R.
+
+This tutorial focuses on visualising the <mark>distribution</mark> of data using bar plots, histograms, and density plots.
+
+<!--
+## Objectives
+
+## Prerequisites
+
+## Key concepts
+
+## Foundation
+
+## Extensions
+-->

@@ -1,0 +1,18 @@
+---
+title: "Visualising relationships"
+---
+
+In this tutorial we will continue to learn about visualisation as a tool for exploratory data analysis.
+We will look at ways of visualising the <mark>relationship</mark> between two or more variables using bar plots, scatterplots, additional aesthetics and <mark>facets</mark>.
+
+<!--
+## Objectives
+
+## Prerequisites
+
+## Key concepts
+
+## Foundation
+
+## Extensions
+-->

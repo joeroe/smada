@@ -30,9 +30,9 @@ website:
         - section: "Exploring archaeological data"
           contents:
             - tutorials/eda_with_r.qmd
-            - tutorials/.visualising_distributions.qmd
-            - tutorials/.visualising_relationships.qmd
-            - tutorials/.summary_statistics.qmd
+            - tutorials/visualising_distributions.qmd
+            - tutorials/visualising_relationships.qmd
+            - tutorials/summary_statistics.qmd
         - section: "Working with archaeological data"
           contents:
             - tutorials/.tidy_data.qmd

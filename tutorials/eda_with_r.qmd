@@ -2,13 +2,13 @@
 title: "Exploring data with R"
 ---
 
-In this tutorial we will look deeper at the R programming language and how it can be used for exploratory data analysis (EDA).
+In this tutorial we will look deeper at the R programming language and how it can be used for <mark>exploratory data analysis</mark> (EDA).
 
 ## Objectives
 
 By the end of this tutorial, you should:
 
-* Recognise the building blocks of the R environment: objects, values, and functions.
+* Recognise the building blocks of the R environment: <mark>objects</mark>, <mark>values</mark>, and <mark>functions</mark>.
 * Use the R console to load a dataset, calculate a statistic and produce a plot
 * Begin your *Zettelkästen* with notes on the key pieces of R syntax you have learned
 
@@ -17,8 +17,43 @@ By the end of this tutorial, you should:
 * Andy Matuschak, '[Evergreen notes](https://notes.andymatuschak.org/Evergreen_notes)'
 * [Install R](https://cran.r-project.org/) on your computer
 
-## Key concepts
-
 ## Foundation
 
+::: {.callout-tip}
+## A note on typography
+R code, including literal values and the names of objects and functions, is denoted by `code-style text`.
+The names of R packages are [linked](#) the first time they are mentioned, but otherwise written with normal text.
+Specialist statistical and programming concepts and other 'terms of art' are <mark>highlighted</mark>.
+:::
+
+<!--
+
+* What is EDA?
+* R intro
+  * Installation
+  * Console / CLIs
+* Basic R syntax:
+  * Values
+  * Functions (infix & regular syntax)
+  * Objects
+  * Assignment
+* R Environment
+  * `ls()`
+  * Understanding/fixing error messages
+* Packages:
+  * Install from CRAN
+  * Install from GitHub
+* Basic EDA
+  * Load a dataset
+  * Look at it
+  * Clean it
+  * Calculate some stats
+  * Make a plot
+  * Save the plot
+-->
+
 ## Extensions
+
+<!--
+* Nudge on notes
+-->
