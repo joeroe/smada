@@ -77,6 +77,27 @@
     "text": "Evaluation\nStudents are asked to maintain a ‘knowledge base’ (Zettelkasten) of notes on the key concepts they learn from the background material and tutorials as the main output of the course and the basis for evaluation. The exact format of the Zettelkasten is up to the individual student. More details will be provided over the course of the semester."
   },
   {
+    "objectID": "tutorials/visualising_distributions.html",
+    "href": "tutorials/visualising_distributions.html",
+    "title": "Visualising distributions",
+    "section": "",
+    "text": "This tutorial is the first of two covering visualisations as a tool for exploratory data analysis. It introduces the package ggplot2, which provides a flexible ‘grammar of graphics’ for visualising data in R.\nThis tutorial focuses on visualising the distribution of data using bar plots, histograms, and density plots."
+  },
+  {
+    "objectID": "tutorials/summary_statistics.html",
+    "href": "tutorials/summary_statistics.html",
+    "title": "Summary statistics",
+    "section": "",
+    "text": "In this tutorial we will look at statistics used to describe or summarise characteristics of a variable such as its , central tendency (‘average’), dispersion, or distribution. You will learn how to use the R package dplyr to filter, mutate, arrange, group, and summarise data."
+  },
+  {
+    "objectID": "tutorials/visualising_relationships.html",
+    "href": "tutorials/visualising_relationships.html",
+    "title": "Visualising relationships",
+    "section": "",
+    "text": "In this tutorial we will continue to learn about visualisation as a tool for exploratory data analysis. We will look at ways of visualising the relationship between two or more variables using bar plots, scatterplots, additional aesthetics and facets."
+  },
+  {
     "objectID": "tutorials/introduction.html",
     "href": "tutorials/introduction.html",
     "title": "Introduction",
@@ -126,18 +147,11 @@
     "text": "Prerequisites\n\nAndy Matuschak, ‘Evergreen notes’\nInstall R on your computer"
   },
   {
-    "objectID": "tutorials/eda_with_r.html#key-concepts",
-    "href": "tutorials/eda_with_r.html#key-concepts",
-    "title": "Exploring data with R",
-    "section": "Key concepts",
-    "text": "Key concepts"
-  },
-  {
     "objectID": "tutorials/eda_with_r.html#foundation",
     "href": "tutorials/eda_with_r.html#foundation",
     "title": "Exploring data with R",
     "section": "Foundation",
-    "text": "Foundation"
+    "text": "Foundation\n\n\n\n\n\n\nA note on typography\n\n\n\nR code, including literal values and the names of objects and functions, is denoted by code-style text. The names of R packages are linked the first time they are mentioned, but otherwise written with normal text. Specialist statistical and programming concepts and other ‘terms of art’ are highlighted."
   },
   {
     "objectID": "tutorials/eda_with_r.html#extensions",

@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tutorials/.visualising_distributions.qmd" rel="next">
+<link href="../tutorials/visualising_distributions.html" rel="next">
 <link href="../tutorials/introduction.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -109,16 +109,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Exploring data with R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/.visualising_distributions.qmd">
- <span class="dropdown-text"></span></a>
+    <a class="dropdown-item" href="../tutorials/visualising_distributions.html">
+ <span class="dropdown-text">Visualising distributions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/.visualising_relationships.qmd">
- <span class="dropdown-text"></span></a>
+    <a class="dropdown-item" href="../tutorials/visualising_relationships.html">
+ <span class="dropdown-text">Visualising relationships</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/.summary_statistics.qmd">
- <span class="dropdown-text"></span></a>
+    <a class="dropdown-item" href="../tutorials/summary_statistics.html">
+ <span class="dropdown-text">Summary statistics</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Working with archaeological data</li>
@@ -196,6 +196,21 @@ ul.task-list li input[type="checkbox"] {
   <a href="../tutorials/eda_with_r.html" class="sidebar-item-text sidebar-link active">Exploring data with R</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/visualising_distributions.html" class="sidebar-item-text sidebar-link">Visualising distributions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/visualising_relationships.html" class="sidebar-item-text sidebar-link">Visualising relationships</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/summary_statistics.html" class="sidebar-item-text sidebar-link">Summary statistics</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -229,7 +244,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key concepts</a></li>
   <li><a href="#foundation" id="toc-foundation" class="nav-link" data-scroll-target="#foundation">Foundation</a></li>
   <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
   </ul>
@@ -255,12 +269,12 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In this tutorial we will look deeper at the R programming language and how it can be used for exploratory data analysis (EDA).</p>
+<p>In this tutorial we will look deeper at the R programming language and how it can be used for <mark>exploratory data analysis</mark> (EDA).</p>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <p>By the end of this tutorial, you should:</p>
 <ul>
-<li>Recognise the building blocks of the R environment: objects, values, and functions.</li>
+<li>Recognise the building blocks of the R environment: <mark>objects</mark>, <mark>values</mark>, and <mark>functions</mark>.</li>
 <li>Use the R console to load a dataset, calculate a statistic and produce a plot</li>
 <li>Begin your <em>Zettelkästen</em> with notes on the key pieces of R syntax you have learned</li>
 </ul>
@@ -272,14 +286,52 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://cran.r-project.org/">Install R</a> on your computer</li>
 </ul>
 </section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key concepts</h2>
-</section>
 <section id="foundation" class="level2">
 <h2 class="anchored" data-anchor-id="foundation">Foundation</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+A note on typography
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>R code, including literal values and the names of objects and functions, is denoted by <code>code-style text</code>. The names of R packages are <a href="#">linked</a> the first time they are mentioned, but otherwise written with normal text. Specialist statistical and programming concepts and other ‘terms of art’ are <mark>highlighted</mark>.</p>
+</div>
+</div>
+<!--
+
+* What is EDA?
+* R intro
+  * Installation
+  * Console / CLIs
+* Basic R syntax:
+  * Values
+  * Functions (infix & regular syntax)
+  * Objects
+  * Assignment
+* R Environment
+  * `ls()`
+  * Understanding/fixing error messages
+* Packages:
+  * Install from CRAN
+  * Install from GitHub
+* Basic EDA
+  * Load a dataset
+  * Look at it
+  * Clean it
+  * Calculate some stats
+  * Make a plot
+  * Save the plot
+-->
 </section>
 <section id="extensions" class="level2">
 <h2 class="anchored" data-anchor-id="extensions">Extensions</h2>
+<!--
+* Nudge on notes
+-->
 
 
 </section>
@@ -425,8 +477,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tutorials/.visualising_distributions.qmd" class="pagination-link">
-        <span class="nav-page-text"></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../tutorials/visualising_distributions.html" class="pagination-link">
+        <span class="nav-page-text">Visualising distributions</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
