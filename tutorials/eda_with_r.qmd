@@ -1,8 +1,20 @@
 ---
 title: "Exploring data with R"
+execute:
+  eval: false
 ---
 
 In this tutorial we will look deeper at the R programming language and how it can be used for <mark>exploratory data analysis</mark> (EDA).
+
+You should run all the R code examples given yourself and answer the exercises at the end of each section.
+Remember to also make notes on key concepts as you encounter them.
+
+::: {.callout-tip}
+### A note on typography
+R code, including literal values and the names of objects and functions, is denoted by `code-style text`.
+The names of R packages are [linked](#) the first time they are mentioned, but otherwise written with normal text.
+Specialist statistical and programming concepts and other 'terms of art' are <mark>highlighted</mark>, especially when they are first used.
+:::
 
 ## Objectives
 
@@ -17,43 +29,374 @@ By the end of this tutorial, you should:
 * Andy Matuschak, '[Evergreen notes](https://notes.andymatuschak.org/Evergreen_notes)'
 * [Install R](https://cran.r-project.org/) on your computer
 
-## Foundation
+## Getting started with R
+
+R is a 'statistical computing environment'.
+It combines a programming language (R) with an interactive <mark>console</mark> for exploring and visualising data, as well as thousands of extensions (<mark>packages</mark>) that can be installed to perform specialised tasks.
+
+On Windows and macOS, the usual way to install R is to [download a binary installer from CRAN](https://cloud.r-project.org/).
+For Linux, it can be found in the official repositories of most distributions.
+Windows users should **make sure to install the Rtools package** too, which is available from the same page.
+Once installed, you should be able to launch RGui, which gives you access to the R console and a collection of other tools (e.g. for installing add-on packages).
+Alternatively, you can launch the R console directly from your operating system's terminal.
 
 ::: {.callout-tip}
-## A note on typography
-R code, including literal values and the names of objects and functions, is denoted by `code-style text`.
-The names of R packages are [linked](#) the first time they are mentioned, but otherwise written with normal text.
-Specialist statistical and programming concepts and other 'terms of art' are <mark>highlighted</mark>.
+### R IDEs
+As you become more proficient in R, you may want to switch to a more complex 'integrated development environment' such as [RStudio](https://posit.co/products/open-source/rstudio/) or [VSCode](https://code.visualstudio.com/), which provide a range of advanced tools for editing and running R code.
+However I recommend sticking with the basic R console to begin with, to remove distractions and help you focus on how the R environment changes as you input commands.
 :::
 
-<!--
+## The R environment
 
-* What is EDA?
-* R intro
-  * Installation
-  * Console / CLIs
-* Basic R syntax:
-  * Values
-  * Functions (infix & regular syntax)
-  * Objects
-  * Assignment
-* R Environment
-  * `ls()`
-  * Understanding/fixing error messages
-* Packages:
-  * Install from CRAN
-  * Install from GitHub
-* Basic EDA
-  * Load a dataset
-  * Look at it
-  * Clean it
-  * Calculate some stats
-  * Make a plot
-  * Save the plot
--->
+R's engine is its <mark>console</mark>, the command-line interface through which you interact with the R environment.
+When you first start the console, you will be presented with a welcome message like this:
 
-## Extensions
+```
+R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
 
-<!--
-* Nudge on notes
--->
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+```
+
+The `>` character at the bottom is R's <mark>command prompt</mark>.
+It indicates that R is waiting for you to tell it to do something!
+Try typing in a simple arithmetic expression such as `2 + 2`:
+
+```{r}
+2 + 2
+```
+
+R responds with the answer: `4` (we will get back to what the `[1]` means later).
+The numbers in this expression represent the first building block of the R environment: <mark>values</mark>.
+These simply represent what they are, e.g. the value `2` is the number 2.
+
+### Values
+
+If we enter a value into the prompt on its own, R simply prints it back for us:
+
+```{r}
+2
+```
+
+Values don't have to be numbers.
+Text can be entered as a <mark>string</mark> or <mark>character</mark> value, which is represented by text surrounded by `"double quotes"`:
+
+```{r}
+"Hello world!"
+```
+
+Again, presented with a value alone, R simply prints it.
+We can't do arithmetic with string values (that wouldn't make sense), but we can manipulate them in other ways:
+
+```{r}
+toupper("Hello world!")
+```
+
+In total, there are six <mark>basic data types</mark> that can be represented as values in R:
+
+| Type        | Examples        | Description |
+| ----------- | --------------- | ----------- |
+| `double`    | `1.2`           | A decimal number, known for historical reasons as a <mark>double precision</mark> value. |
+| `integer`   | `1L`            | A whole number; an integer. |
+| `character` | `"abc"`         | Text, also known as a <mark>string</mark>. Character values can also be entered with single quotes, e.g. `'abc'`, but double quotes is the norm. |
+| `logical`   | `TRUE`, `FALSE` | A <mark>binary</mark> or <mark>boolean</mark> value, representing 'yes' or 'no', 'true' or 'false', etc. Logical values can also be entered with the abbreviations `T` and `F`, but this should be avoided because it is possible to do `T <- FALSE` and wreak havoc. |
+| `complex`   | `1i`            | A <mark>complex number</mark> |
+| `raw`       | `as.raw(255)`   | The <mark>raw bytes</mark> underlying other values |
+
+In most cases R converts freely between <mark>doubles</mark> and <mark>integers</mark>, so they are often grouped together and called <mark>numerics</mark>.
+<mark>Complex</mark> and <mark>raw</mark> values are rarely encountered in practice and are included here only for completeness.
+
+<mark>Logical</mark> values give us the possibility of using R to evaluate logical statements.
+For example, we can test if two values are equal to one another using the `==` operator:
+
+```{r}
+2 == 2
+1 == 2
+"Hello" == "HELLO"
+```
+
+The result is a logical value: `TRUE` or `FALSE`.
+We will look at logical operations in more detail in the next section.
+For now, be aware that R sometimes try to be clever and interpret one data type as another:
+
+```{r}
+3L == 3
+3 == "3"
+TRUE == 1
+```
+
+But it is not *that* clever:
+
+```{r}
+3 == "three"
+"false" == FALSE
+```
+
+#### Vectors
+
+R doesn't limit us to single values.
+We can combine them together into a <mark>vector</mark> by entering a list of values separated with a comma and enclosed in `c(    )`.
+For example, a sequence of numbers:
+
+```{r}
+c(1, 2, 3, 4, 5)
+```
+
+Or a series of strings:
+
+```{r}
+c("red", "orange", "yellow", "green", "blue")
+```
+
+There is also a shortcut syntax for creating vectors with a sequence of consecutive numbers:
+
+```{r}
+1:10
+```
+
+Vectors enable <mark>vector operations</mark>.
+For example, if we do arithmetic with two vectors, R will repeat the operation on each pair of values (note that this is **not** what a mathematician would do if asked to multiply vectors):
+
+```{r}
+c(1, 2, 3) * c(3, 2, 1)
+c("A", "B", "C") == c("A", "b", "c")
+```
+
+In fact, R considers all values to be vectors: a value like `2` is simply a vector of one number.
+This is why when we print even a single value it is proceeded by a `[1]` (indicating the initial position in a vector).
+Vector operations are fundamental to R and by default anything that you can do with a single value, you can also do with a vector:
+
+```{r}
+c(1, 2, 3) * 2
+toupper(c("red", "orange", "yellow", "green", "blue"))
+```
+
+Note that **vectors can only contain one data type**. If you try to combine more than one data type, R will try to find the 'common denominator':
+
+```{r}
+c(1, 2, "3")
+```
+
+#### `NA` and null values
+
+In addition to the six basic data types, R recognises a number of special values that represent the *absence* of a value.
+
+The most common of these is `NA`, which in R means "missing data" or "unknown".
+When importing tables of data into R, empty cells will be read as `NA`.
+`NA` values can occur in any of the six basic data types, for example:
+
+```{r}
+c(1, NA, 3)
+c("red", NA, "yellow")
+```
+
+Importantly, `NA` is *not* equivalent to `0` or `FALSE`; those are known values.
+Generally speaking, introducing `NA` into an expression 'propagates' the unknown value:
+
+```{r}
+NA == 5
+NA * 5
+```
+
+This is because R doesn't know if `NA` is 5. 
+It could be; it could not.
+It also doesn't know what the result of multiplying an unknown value by 5 is.
+
+The strictness with which R treats `NA`s can be frustrating at times, but it is mathematically well-founded and generally protects you from doing silly things (as we saw last week!)
+
+#### Exercises
+
+1. Use R to calculate the mean of these ten random numbers: `r round(runif(10, 0, 100))`
+2. What is the result of `c(FALSE, TRUE, 2, 3) == 0:3`? Why?
+3. What is the result of `NA == NA`? Why?
+
+### Objects
+
+Apart from values, R interprets everything you type into the console as the name of an <mark>object</mark>.
+This is why we have to surround character values with quotes, to distinguish them from objects:
+
+```{r}
+"version"
+version
+```
+
+Why do these two commands produce such different output?
+`"version"` is a value – the word 'version'.
+`version` is an object, storing information on the version of R you have installed.
+
+#### Errors
+
+Most words aren't the name of an object, so if you forget to enclose a character value with quotes (which is easily done), you are likely to encounter an error like this:
+
+```{r}
+#| error: true
+hello
+```
+
+"Error: object 'hello' not found" tells us fairly straightforwardly what the problem is: there is no object called `hello`.
+
+This is the first of many errors you are going to see on this course!
+What if, for example, we try to multiply two strings, an operation that doesn't make sense?
+
+```{r}
+"Hello world!" * "Goodbye, world..."
+```
+
+This time the message ("non-numeric argument to binary operator") is pretty cryptic, which is unfortunately quite common with R.
+Essentially what it means is that R does not know how to add (a "binary operation") something that is not a number (a "non-numeric argument").
+But however cryptic they are, it's important that you **pay attention to errors** when they occur.
+R never raises errors without reason and it is unlikely that you will be able to continue with your work until you have resolved them.
+
+::: {.callout-tip}
+##### Deciphering R error messages
+As you get used to the jargon used in R's error and warning messages, you will find that they do actually explain what the problem is.
+In the meantime, apart from asking your instructor, you can always try just pasting the error into a search engine.
+Unless you're doing something truly exotic, it is very likely that someone else has encountered it before and has explained what it means in ordinary language.
+
+When you run more than one line of R code at a time, an error in one line is likely to produce errors in subsequent code. 
+In these circumstances, it's important to start investigating the problem with the **first** error encountered.
+If you encountered an error when trying to create an object, for example, you might subsequently get the "object not found" error when trying to use it – but this doesn't tell you the root of the problem.
+:::
+
+#### Assignment
+
+The R environment is initialised with a certain number of in-built objects, like `version`.
+Much more useful, however, is creating objects yourself.
+For this, we use the <mark>assignment operator</mark>, `<-`:
+
+```{r}
+x <- 2
+x
+```
+
+What is happening here?
+In the first line, we <mark>assign</mark> the value `2` to the object `x`.
+In the second line, we ask R to print the object `x`, which is `2`.
+
+Assignment is how we can start to build up routines that are more complex than those we could do on a calculator.
+For example, we can break down the exercise of calculating the mean into several steps:
+
+```{r}
+total <- 10 + 20 + 30 + 40 + 50
+n <- 5
+total / n
+```
+
+As you populate the R environment with objects, it can be easy to get lost.
+For example, what if I forget that I've already used the name `n` and reassign it to something else?
+Then if I try to calculate the mean again:
+
+```{r}
+n <- "N"
+total / n
+```
+
+Entering `ls()` lists the objects currently in the R environment, so we can keep track:
+
+```{r}
+ls()
+```
+
+If you need to clean things up, you can remove objects with `rm()`:
+
+```{r}
+rm(n)
+ls()
+```
+
+Or to start completely afresh, simply restart R: objects are not saved between sessions.
+
+::: {.callout-tip}
+##### Naming objects
+As the work you do in R becomes more complicated, choosing good names for objects is crucial for keeping track.
+There are some hard rules about object names:
+
+* Object names can't contain spaces
+* Object names can't start with a number
+* Object names can only contain letters, numbers, `_` and `.`
+* Object names are case sensitive (e.g. `X` is different from `x`)
+
+And some good tips:
+
+* Pick a convention for separating words (e.g. `snake_case` or `camelCase`) and stick to it
+* It is better to use a long and descriptive name (e.g. `switzerland_sites`) than a short, abstract one (e.g. `data`)
+* Don't reassign object names unless you have a good reason to
+:::
+
+#### Exercises
+
+1. Create objects containing a) a vector of numbers, b) a single character value and c) the sum of a set of numbers
+2. Why does `3sites <- c("Stonehenge", "Giza", "Knossos")` produce an error?
+3. What would you call an object containing the mean site size of Neolithic sites in Germany?
+
+### Functions
+
+<mark>Functions</mark> are a special type of object that *do something* with other objects or values (called <mark>arguments</mark>).
+You have already met several functions in this tutorial: arithmetic operators like `+`, logical operators like `==`, and regular functions like `ls()`.
+
+These show two different <mark>function syntaxes</mark>.
+The arithmetic and logical operators use <mark>infix syntax</mark>, with two arguments and the function name (the <mark>operator</mark>) in the middle:
+
+```{r}
+2 + 2
+```
+
+Most functions, and any that can have more than two arguments, use <mark>regular function syntax</mark>.
+This looks something like this:
+
+```
+function(argument1, argument2, argument3)
+```
+
+`ls()` is a function of this style, which takes no arguments (hence the empty brackets).
+An example of a function that does take arguments is `sum()`:
+
+```{r}
+sum(10, 20, 30, 40, 50)
+```
+
+Function arguments can also be objects:
+
+```{r}
+x <- 1:100
+sum(x)
+```
+
+#### Exercises
+
+1. Calculate the mean of these ten random numbers **using the sum() function**: `r round(runif(10, 0, 100))`
+2. Why is it a bad idea to assign the mean of a variable to a new object called `mean`?
+
+## Exploratory data analysis with R
+
+Now you're familiar with the fundamental building blocks of the R environment, we're ready to put them into action in exploring some data.
+For this, follow sections 2.1 and 2.2 in [R for Data Science](https://r4ds.hadley.nz/data-visualize.html) (2nd edition), including the exercises.
+
+## Extension exercises
+
+1. Review the <mark>highlighted</mark> concepts in this tutorial and make sure that your notes cover them.
+2. Identify and fix the errors in the following code:
+
+```{r}
+#| error: true
+libary(todyverse)
+
+ggplot(dTA = mpg) + 
+  geom_point(maping = aes(x = displ y = hwy)) +
+  geom_smooth(method = "lm)
+```
