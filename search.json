@@ -1,145 +1,5 @@
 [
   {
-    "objectID": "info.html",
-    "href": "info.html",
-    "title": "Information for students",
-    "section": "",
-    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
-  },
-  {
-    "objectID": "info.html#access-accommodations",
-    "href": "info.html#access-accommodations",
-    "title": "Information for students",
-    "section": "Access & accommodations",
-    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
-  },
-  {
-    "objectID": "info.html#academic-integrity",
-    "href": "info.html#academic-integrity",
-    "title": "Information for students",
-    "section": "Academic integrity",
-    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
-  },
-  {
-    "objectID": "info.html#mental-health",
-    "href": "info.html#mental-health",
-    "title": "Information for students",
-    "section": "Mental health",
-    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
-  },
-  {
-    "objectID": "tutorials/summary_statistics.html",
-    "href": "tutorials/summary_statistics.html",
-    "title": "Summary statistics",
-    "section": "",
-    "text": "In this tutorial we will look at statistics used to describe or summarise characteristics of a variable such as its , central tendency (‘average’), dispersion, or distribution. You will learn how to use the R package dplyr to filter, mutate, arrange, group, and summarise data."
-  },
-  {
-    "objectID": "tutorials/visualising_distributions.html",
-    "href": "tutorials/visualising_distributions.html",
-    "title": "Visualising distributions",
-    "section": "",
-    "text": "This tutorial is the first of two covering visualisations as a tool for exploratory data analysis. It introduces the package ggplot2, which provides a flexible ‘grammar of graphics’ for visualising data in R.\nThis tutorial focuses on visualising the distribution of data using bar plots, histograms, and density plots."
-  },
-  {
-    "objectID": "tutorials/visualising_distributions.html#prerequisites",
-    "href": "tutorials/visualising_distributions.html#prerequisites",
-    "title": "Visualising distributions",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nHadley Wickham, The Role of Visualization in Exploratory Data Analysis (video)"
-  },
-  {
-    "objectID": "tutorials/eda_with_r.html",
-    "href": "tutorials/eda_with_r.html",
-    "title": "Exploring data with R",
-    "section": "",
-    "text": "In this tutorial we will look deeper at the R programming language and how it can be used for exploratory data analysis (EDA).\nYou should run all the R code examples given yourself and answer the exercises at the end of each section. Remember to also make notes on key concepts as you encounter them."
-  },
-  {
-    "objectID": "tutorials/eda_with_r.html#objectives",
-    "href": "tutorials/eda_with_r.html#objectives",
-    "title": "Exploring data with R",
-    "section": "Objectives",
-    "text": "Objectives\nBy the end of this tutorial, you should:\n\nRecognise the building blocks of the R environment: objects, values, and functions.\nUse the R console to load a dataset, calculate a statistic and produce a plot\nBegin your Zettelkästen with notes on the key pieces of R syntax you have learned"
-  },
-  {
-    "objectID": "tutorials/eda_with_r.html#prerequisites",
-    "href": "tutorials/eda_with_r.html#prerequisites",
-    "title": "Exploring data with R",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nAndy Matuschak, ‘Evergreen notes’\nInstall R on your computer"
-  },
-  {
-    "objectID": "tutorials/eda_with_r.html#getting-started-with-r",
-    "href": "tutorials/eda_with_r.html#getting-started-with-r",
-    "title": "Exploring data with R",
-    "section": "Getting started with R",
-    "text": "Getting started with R\nR is a ‘statistical computing environment’. It combines a programming language (R) with an interactive console for exploring and visualising data, as well as thousands of extensions (packages) that can be installed to perform specialised tasks.\nOn Windows and macOS, the usual way to install R is to download a binary installer from CRAN. For Linux, it can be found in the official repositories of most distributions. Windows users should make sure to install the Rtools package too, which is available from the same page. Once installed, you should be able to launch RGui, which gives you access to the R console and a collection of other tools (e.g. for installing add-on packages). Alternatively, you can launch the R console directly from your operating system’s terminal.\n\n\n\n\n\n\nR IDEs\n\n\n\nAs you become more proficient in R, you may want to switch to a more complex ‘integrated development environment’ such as RStudio or VSCode, which provide a range of advanced tools for editing and running R code. However I recommend sticking with the basic R console to begin with, to remove distractions and help you focus on how the R environment changes as you input commands."
-  },
-  {
-    "objectID": "tutorials/eda_with_r.html#the-r-environment",
-    "href": "tutorials/eda_with_r.html#the-r-environment",
-    "title": "Exploring data with R",
-    "section": "The R environment",
-    "text": "The R environment\nR’s engine is its console, the command-line interface through which you interact with the R environment. When you first start the console, you will be presented with a welcome message like this:\nR version 4.2.2 (2022-10-31) -- \"Innocent and Trusting\"\nCopyright (C) 2022 The R Foundation for Statistical Computing\nPlatform: x86_64-pc-linux-gnu (64-bit)\n\nR is free software and comes with ABSOLUTELY NO WARRANTY.\nYou are welcome to redistribute it under certain conditions.\nType 'license()' or 'licence()' for distribution details.\n\n  Natural language support but running in an English locale\n\nR is a collaborative project with many contributors.\nType 'contributors()' for more information and\n'citation()' on how to cite R or R packages in publications.\n\nType 'demo()' for some demos, 'help()' for on-line help, or\n'help.start()' for an HTML browser interface to help.\nType 'q()' to quit R.\n\n> \nThe > character at the bottom is R’s command prompt. It indicates that R is waiting for you to tell it to do something! Try typing in a simple arithmetic expression such as 2 + 2:\n\n2 + 2\n\nR responds with the answer: 4 (we will get back to what the [1] means later). The numbers in this expression represent the first building block of the R environment: values. These simply represent what they are, e.g. the value 2 is the number 2.\n\nValues\nIf we enter a value into the prompt on its own, R simply prints it back for us:\n\n2\n\nValues don’t have to be numbers. Text can be entered as a string or character value, which is represented by text surrounded by \"double quotes\":\n\n\"Hello world!\"\n\nAgain, presented with a value alone, R simply prints it. We can’t do arithmetic with string values (that wouldn’t make sense), but we can manipulate them in other ways:\n\ntoupper(\"Hello world!\")\n\nIn total, there are six basic data types that can be represented as values in R:\n\n\n\n\n\n\n\n\nType\nExamples\nDescription\n\n\n\n\ndouble\n1.2\nA decimal number, known for historical reasons as a double precision value.\n\n\ninteger\n1L\nA whole number; an integer.\n\n\ncharacter\n\"abc\"\nText, also known as a string. Character values can also be entered with single quotes, e.g. 'abc', but double quotes is the norm.\n\n\nlogical\nTRUE, FALSE\nA binary or boolean value, representing ‘yes’ or ‘no’, ‘true’ or ‘false’, etc. Logical values can also be entered with the abbreviations T and F, but this should be avoided because it is possible to do T <- FALSE and wreak havoc.\n\n\ncomplex\n1i\nA complex number\n\n\nraw\nas.raw(255)\nThe raw bytes underlying other values\n\n\n\nIn most cases R converts freely between doubles and integers, so they are often grouped together and called numerics. Complex and raw values are rarely encountered in practice and are included here only for completeness.\nLogical values give us the possibility of using R to evaluate logical statements. For example, we can test if two values are equal to one another using the == operator:\n\n2 == 2\n1 == 2\n\"Hello\" == \"HELLO\"\n\nThe result is a logical value: TRUE or FALSE. We will look at logical operations in more detail in the next section. For now, be aware that R sometimes try to be clever and interpret one data type as another:\n\n3L == 3\n3 == \"3\"\nTRUE == 1\n\nBut it is not that clever:\n\n3 == \"three\"\n\"false\" == FALSE\n\n\nVectors\nR doesn’t limit us to single values. We can combine them together into a vector by entering a list of values separated with a comma and enclosed in c(    ). For example, a sequence of numbers:\n\nc(1, 2, 3, 4, 5)\n\nOr a series of strings:\n\nc(\"red\", \"orange\", \"yellow\", \"green\", \"blue\")\n\nThere is also a shortcut syntax for creating vectors with a sequence of consecutive numbers:\n\n1:10\n\nVectors enable vector operations. For example, if we do arithmetic with two vectors, R will repeat the operation on each pair of values (note that this is not what a mathematician would do if asked to multiply vectors):\n\nc(1, 2, 3) * c(3, 2, 1)\nc(\"A\", \"B\", \"C\") == c(\"A\", \"b\", \"c\")\n\nIn fact, R considers all values to be vectors: a value like 2 is simply a vector of one number. This is why when we print even a single value it is proceeded by a [1] (indicating the initial position in a vector). Vector operations are fundamental to R and by default anything that you can do with a single value, you can also do with a vector:\n\nc(1, 2, 3) * 2\ntoupper(c(\"red\", \"orange\", \"yellow\", \"green\", \"blue\"))\n\nNote that vectors can only contain one data type. If you try to combine more than one data type, R will try to find the ‘common denominator’:\n\nc(1, 2, \"3\")\n\n\n\nNA and null values\nIn addition to the six basic data types, R recognises a number of special values that represent the absence of a value.\nThe most common of these is NA, which in R means “missing data” or “unknown”. When importing tables of data into R, empty cells will be read as NA. NA values can occur in any of the six basic data types, for example:\n\nc(1, NA, 3)\nc(\"red\", NA, \"yellow\")\n\nImportantly, NA is not equivalent to 0 or FALSE; those are known values. Generally speaking, introducing NA into an expression ‘propagates’ the unknown value:\n\nNA == 5\nNA * 5\n\nThis is because R doesn’t know if NA is 5. It could be; it could not. It also doesn’t know what the result of multiplying an unknown value by 5 is.\nThe strictness with which R treats NAs can be frustrating at times, but it is mathematically well-founded and generally protects you from doing silly things (as we saw last week!)\n\n\nExercises\n\nUse R to calculate the mean of these ten random numbers: 77, 10, 83, 63, 73, 14, 4, 9, 15, 13\nWhat is the result of c(FALSE, TRUE, 2, 3) == 0:3? Why?\nWhat is the result of NA == NA? Why?\n\n\n\n\nObjects\nApart from values, R interprets everything you type into the console as the name of an object. This is why we have to surround character values with quotes, to distinguish them from objects:\n\n\"version\"\nversion\n\nWhy do these two commands produce such different output? \"version\" is a value – the word ‘version’. version is an object, storing information on the version of R you have installed.\n\nErrors\nMost words aren’t the name of an object, so if you forget to enclose a character value with quotes (which is easily done), you are likely to encounter an error like this:\n\nhello\n\n“Error: object ‘hello’ not found” tells us fairly straightforwardly what the problem is: there is no object called hello.\nThis is the first of many errors you are going to see on this course! What if, for example, we try to multiply two strings, an operation that doesn’t make sense?\n\n\"Hello world!\" * \"Goodbye, world...\"\n\nThis time the message (“non-numeric argument to binary operator”) is pretty cryptic, which is unfortunately quite common with R. Essentially what it means is that R does not know how to add (a “binary operation”) something that is not a number (a “non-numeric argument”). But however cryptic they are, it’s important that you pay attention to errors when they occur. R never raises errors without reason and it is unlikely that you will be able to continue with your work until you have resolved them.\n\n\n\n\n\n\nDeciphering R error messages\n\n\n\nAs you get used to the jargon used in R’s error and warning messages, you will find that they do actually explain what the problem is. In the meantime, apart from asking your instructor, you can always try just pasting the error into a search engine. Unless you’re doing something truly exotic, it is very likely that someone else has encountered it before and has explained what it means in ordinary language.\nWhen you run more than one line of R code at a time, an error in one line is likely to produce errors in subsequent code. In these circumstances, it’s important to start investigating the problem with the first error encountered. If you encountered an error when trying to create an object, for example, you might subsequently get the “object not found” error when trying to use it – but this doesn’t tell you the root of the problem.\n\n\n\n\nAssignment\nThe R environment is initialised with a certain number of in-built objects, like version. Much more useful, however, is creating objects yourself. For this, we use the assignment operator, <-:\n\nx <- 2\nx\n\nWhat is happening here? In the first line, we assign the value 2 to the object x. In the second line, we ask R to print the object x, which is 2.\nAssignment is how we can start to build up routines that are more complex than those we could do on a calculator. For example, we can break down the exercise of calculating the mean into several steps:\n\ntotal <- 10 + 20 + 30 + 40 + 50\nn <- 5\ntotal / n\n\nAs you populate the R environment with objects, it can be easy to get lost. For example, what if I forget that I’ve already used the name n and reassign it to something else? Then if I try to calculate the mean again:\n\nn <- \"N\"\ntotal / n\n\nEntering ls() lists the objects currently in the R environment, so we can keep track:\n\nls()\n\nIf you need to clean things up, you can remove objects with rm():\n\nrm(n)\nls()\n\nOr to start completely afresh, simply restart R: objects are not saved between sessions.\n\n\n\n\n\n\nNaming objects\n\n\n\nAs the work you do in R becomes more complicated, choosing good names for objects is crucial for keeping track. There are some hard rules about object names:\n\nObject names can’t contain spaces\nObject names can’t start with a number\nObject names can only contain letters, numbers, _ and .\nObject names are case sensitive (e.g. X is different from x)\n\nAnd some good tips:\n\nPick a convention for separating words (e.g. snake_case or camelCase) and stick to it\nIt is better to use a long and descriptive name (e.g. switzerland_sites) than a short, abstract one (e.g. data)\nDon’t reassign object names unless you have a good reason to\n\n\n\n\n\nExercises\n\nCreate objects containing a) a vector of numbers, b) a single character value and c) the sum of a set of numbers\nWhy does 3sites <- c(\"Stonehenge\", \"Giza\", \"Knossos\") produce an error?\nWhat would you call an object containing the mean site size of Neolithic sites in Germany?\n\n\n\n\nFunctions\nFunctions are a special type of object that do something with other objects or values (called arguments). You have already met several functions in this tutorial: arithmetic operators like +, logical operators like ==, and regular functions like ls().\nThese show two different function syntaxes. The arithmetic and logical operators use infix syntax, with two arguments and the function name (the operator) in the middle:\n\n2 + 2\n\nMost functions, and any that can have more than two arguments, use regular function syntax. This looks something like this:\nfunction(argument1, argument2, argument3)\nls() is a function of this style, which takes no arguments (hence the empty brackets). An example of a function that does take arguments is sum():\n\nsum(10, 20, 30, 40, 50)\n\nFunction arguments can also be objects:\n\nx <- 1:100\nsum(x)\n\n\nExercises\n\nCalculate the mean of these ten random numbers using the sum() function: 92, 43, 73, 49, 39, 9, 35, 55, 40, 76\nWhy is it a bad idea to assign the mean of a variable to a new object called mean?"
-  },
-  {
-    "objectID": "tutorials/eda_with_r.html#exploratory-data-analysis-with-r",
-    "href": "tutorials/eda_with_r.html#exploratory-data-analysis-with-r",
-    "title": "Exploring data with R",
-    "section": "Exploratory data analysis with R",
-    "text": "Exploratory data analysis with R\nNow you’re familiar with the fundamental building blocks of the R environment, we’re ready to put them into action in exploring some data. For this, follow sections 2.1 and 2.2 in R for Data Science (2nd edition), including the exercises."
-  },
-  {
-    "objectID": "tutorials/eda_with_r.html#extension-exercises",
-    "href": "tutorials/eda_with_r.html#extension-exercises",
-    "title": "Exploring data with R",
-    "section": "Extension exercises",
-    "text": "Extension exercises\n\nReview the highlighted concepts in this tutorial and make sure that your notes cover them.\nIdentify and fix the errors in the following code:\n\n\nlibary(todyverse)\n\nggplot(dTA = mpg) + \n  geom_point(maping = aes(x = displ y = hwy)) +\n  geom_smooth(method = \"lm)"
-  },
-  {
-    "objectID": "tutorials/introduction.html",
-    "href": "tutorials/introduction.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "In this tutorial we will discuss the role of statistics in archaeology, review some recent trends and current issues in archaeostatistics, and introduce the learning aims, format, and practicalities for the rest of the course."
-  },
-  {
-    "objectID": "tutorials/introduction.html#objectives",
-    "href": "tutorials/introduction.html#objectives",
-    "title": "Introduction",
-    "section": "Objectives",
-    "text": "Objectives\nBy the end of this tutorial you should:\n\nUnderstand the theoretical context and ‘uses of abuses’ of statistics in archaeology\nBe familiar with current issues and trends in archaeostatistics\nCritically engage with a recent application of statistics in archaeology"
-  },
-  {
-    "objectID": "tutorials/introduction.html#prerequisites",
-    "href": "tutorials/introduction.html#prerequisites",
-    "title": "Introduction",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nNone."
-  },
-  {
-    "objectID": "tutorials/introduction.html#mini-practical-moralizing-gods",
-    "href": "tutorials/introduction.html#mini-practical-moralizing-gods",
-    "title": "Introduction",
-    "section": "Mini-practical: ‘Moralizing Gods’",
-    "text": "Mini-practical: ‘Moralizing Gods’\n\nmoralizing_gods.csv – data from Whitehouse et al. 2019"
-  },
-  {
-    "objectID": "tutorials/visualising_relationships.html",
-    "href": "tutorials/visualising_relationships.html",
-    "title": "Visualising relationships",
-    "section": "",
-    "text": "In this tutorial we will continue to learn about visualisation as a tool for exploratory data analysis. We will look at ways of visualising the relationship between two or more variables using bar plots, scatterplots, additional aesthetics and facets."
-  },
-  {
-    "objectID": "bibliography.html",
-    "href": "bibliography.html",
-    "title": "Bibliography & Further Reading",
-    "section": "",
-    "text": "Shennan, S. 1997. Quantifying Archaeology. Second edition.\nDrennan, R. D. Statistics for Archaeologists: A Commonsense Approach. Second edition."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Course overview",
@@ -175,10 +35,199 @@
     "text": "Evaluation\nStudents are asked to maintain a ‘knowledge base’ (Zettelkasten) of notes on the key concepts they learn from the background material and tutorials as the main output of the course and the basis for evaluation. The exact format of the Zettelkasten is up to the individual student. More details will be provided over the course of the semester."
   },
   {
+    "objectID": "tutorials/introduction.html",
+    "href": "tutorials/introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "In this tutorial we will discuss the role of statistics in archaeology, review some recent trends and current issues in archaeostatistics, and introduce the learning aims, format, and practicalities for the rest of the course."
+  },
+  {
+    "objectID": "tutorials/introduction.html#objectives",
+    "href": "tutorials/introduction.html#objectives",
+    "title": "Introduction",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this tutorial you should:\n\nUnderstand the theoretical context and ‘uses of abuses’ of statistics in archaeology\nBe familiar with current issues and trends in archaeostatistics\nCritically engage with a recent application of statistics in archaeology"
+  },
+  {
+    "objectID": "tutorials/introduction.html#prerequisites",
+    "href": "tutorials/introduction.html#prerequisites",
+    "title": "Introduction",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nNone."
+  },
+  {
+    "objectID": "tutorials/introduction.html#mini-practical-moralizing-gods",
+    "href": "tutorials/introduction.html#mini-practical-moralizing-gods",
+    "title": "Introduction",
+    "section": "Mini-practical: ‘Moralizing Gods’",
+    "text": "Mini-practical: ‘Moralizing Gods’\n\nmoralizing_gods.csv – data from Whitehouse et al. 2019"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html",
+    "href": "tutorials/eda_with_r.html",
+    "title": "Exploring data with R",
+    "section": "",
+    "text": "In this tutorial we will look deeper at the R programming language and how it can be used for exploratory data analysis (EDA).\nYou should run all the R code examples given yourself and answer the exercises at the end of each section. Remember to also make notes on key concepts as you encounter them."
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#objectives",
+    "href": "tutorials/eda_with_r.html#objectives",
+    "title": "Exploring data with R",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this tutorial, you should:\n\nRecognise the building blocks of the R environment: objects, values, and functions.\nUse the R console to load a dataset, calculate a statistic and produce a plot\nBegin your Zettelkästen with notes on the key pieces of R syntax you have learned"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#prerequisites",
+    "href": "tutorials/eda_with_r.html#prerequisites",
+    "title": "Exploring data with R",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nAndy Matuschak, ‘Evergreen notes’\nInstall R on your computer"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#getting-started-with-r",
+    "href": "tutorials/eda_with_r.html#getting-started-with-r",
+    "title": "Exploring data with R",
+    "section": "Getting started with R",
+    "text": "Getting started with R\nR is a ‘statistical computing environment’. It combines a programming language (R) with an interactive console for exploring and visualising data, as well as thousands of extensions (packages) that can be installed to perform specialised tasks.\nOn Windows and macOS, the usual way to install R is to download a binary installer from CRAN. For Linux, it can be found in the official repositories of most distributions. Windows users should make sure to install the Rtools package too, which is available from the same page. Once installed, you should be able to launch RGui, which gives you access to the R console and a collection of other tools (e.g. for installing add-on packages). Alternatively, you can launch the R console directly from your operating system’s terminal.\n\n\n\n\n\n\nR IDEs\n\n\n\nAs you become more proficient in R, you may want to switch to a more complex ‘integrated development environment’ such as RStudio or VSCode, which provide a range of advanced tools for editing and running R code. However I recommend sticking with the basic R console to begin with, to remove distractions and help you focus on how the R environment changes as you input commands."
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#the-r-environment",
+    "href": "tutorials/eda_with_r.html#the-r-environment",
+    "title": "Exploring data with R",
+    "section": "The R environment",
+    "text": "The R environment\nR’s engine is its console, the command-line interface through which you interact with the R environment. When you first start the console, you will be presented with a welcome message like this:\nR version 4.2.2 (2022-10-31) -- \"Innocent and Trusting\"\nCopyright (C) 2022 The R Foundation for Statistical Computing\nPlatform: x86_64-pc-linux-gnu (64-bit)\n\nR is free software and comes with ABSOLUTELY NO WARRANTY.\nYou are welcome to redistribute it under certain conditions.\nType 'license()' or 'licence()' for distribution details.\n\n  Natural language support but running in an English locale\n\nR is a collaborative project with many contributors.\nType 'contributors()' for more information and\n'citation()' on how to cite R or R packages in publications.\n\nType 'demo()' for some demos, 'help()' for on-line help, or\n'help.start()' for an HTML browser interface to help.\nType 'q()' to quit R.\n\n> \nThe > character at the bottom is R’s command prompt. It indicates that R is waiting for you to tell it to do something! Try typing in a simple arithmetic expression such as 2 + 2:\n\n2 + 2\n\nR responds with the answer: 4 (we will get back to what the [1] means later). The numbers in this expression represent the first building block of the R environment: values. These simply represent what they are, e.g. the value 2 is the number 2.\n\nValues\nIf we enter a value into the prompt on its own, R simply prints it back for us:\n\n2\n\nValues don’t have to be numbers. Text can be entered as a string or character value, which is represented by text surrounded by \"double quotes\":\n\n\"Hello world!\"\n\nAgain, presented with a value alone, R simply prints it. We can’t do arithmetic with string values (that wouldn’t make sense), but we can manipulate them in other ways:\n\ntoupper(\"Hello world!\")\n\nIn total, there are six basic data types that can be represented as values in R:\n\n\n\n\n\n\n\n\nType\nExamples\nDescription\n\n\n\n\ndouble\n1.2\nA decimal number, known for historical reasons as a double precision value.\n\n\ninteger\n1L\nA whole number; an integer.\n\n\ncharacter\n\"abc\"\nText, also known as a string. Character values can also be entered with single quotes, e.g. 'abc', but double quotes is the norm.\n\n\nlogical\nTRUE, FALSE\nA binary or boolean value, representing ‘yes’ or ‘no’, ‘true’ or ‘false’, etc. Logical values can also be entered with the abbreviations T and F, but this should be avoided because it is possible to do T <- FALSE and wreak havoc.\n\n\ncomplex\n1i\nA complex number\n\n\nraw\nas.raw(255)\nThe raw bytes underlying other values\n\n\n\nIn most cases R converts freely between doubles and integers, so they are often grouped together and called numerics. Complex and raw values are rarely encountered in practice and are included here only for completeness.\nLogical values give us the possibility of using R to evaluate logical statements. For example, we can test if two values are equal to one another using the == operator:\n\n2 == 2\n1 == 2\n\"Hello\" == \"HELLO\"\n\nThe result is a logical value: TRUE or FALSE. We will look at logical operations in more detail in the next section. For now, be aware that R sometimes try to be clever and interpret one data type as another:\n\n3L == 3\n3 == \"3\"\nTRUE == 1\n\nBut it is not that clever:\n\n3 == \"three\"\n\"false\" == FALSE\n\n\nVectors\nR doesn’t limit us to single values. We can combine them together into a vector by entering a list of values separated with a comma and enclosed in c(    ). For example, a sequence of numbers:\n\nc(1, 2, 3, 4, 5)\n\nOr a series of strings:\n\nc(\"red\", \"orange\", \"yellow\", \"green\", \"blue\")\n\nThere is also a shortcut syntax for creating vectors with a sequence of consecutive numbers:\n\n1:10\n\nVectors enable vector operations. For example, if we do arithmetic with two vectors, R will repeat the operation on each pair of values (note that this is not what a mathematician would do if asked to multiply vectors):\n\nc(1, 2, 3) * c(3, 2, 1)\nc(\"A\", \"B\", \"C\") == c(\"A\", \"b\", \"c\")\n\nIn fact, R considers all values to be vectors: a value like 2 is simply a vector of one number. This is why when we print even a single value it is proceeded by a [1] (indicating the initial position in a vector). Vector operations are fundamental to R and by default anything that you can do with a single value, you can also do with a vector:\n\nc(1, 2, 3) * 2\ntoupper(c(\"red\", \"orange\", \"yellow\", \"green\", \"blue\"))\n\nNote that vectors can only contain one data type. If you try to combine more than one data type, R will try to find the ‘common denominator’:\n\nc(1, 2, \"3\")\n\n\n\nNA and null values\nIn addition to the six basic data types, R recognises a number of special values that represent the absence of a value.\nThe most common of these is NA, which in R means “missing data” or “unknown”. When importing tables of data into R, empty cells will be read as NA. NA values can occur in any of the six basic data types, for example:\n\nc(1, NA, 3)\nc(\"red\", NA, \"yellow\")\n\nImportantly, NA is not equivalent to 0 or FALSE; those are known values. Generally speaking, introducing NA into an expression ‘propagates’ the unknown value:\n\nNA == 5\nNA * 5\n\nThis is because R doesn’t know if NA is 5. It could be; it could not. It also doesn’t know what the result of multiplying an unknown value by 5 is.\nThe strictness with which R treats NAs can be frustrating at times, but it is mathematically well-founded and generally protects you from doing silly things (as we saw last week!)\n\n\nExercises\n\nUse R to calculate the mean of these ten random numbers: 8, 61, 100, 6, 41, 87, 73, 65, 10, 74\nWhat is the result of c(FALSE, TRUE, 2, 3) == 0:3? Why?\nWhat is the result of NA == NA? Why?\n\n\n\n\nObjects\nApart from values, R interprets everything you type into the console as the name of an object. This is why we have to surround character values with quotes, to distinguish them from objects:\n\n\"version\"\nversion\n\nWhy do these two commands produce such different output? \"version\" is a value – the word ‘version’. version is an object, storing information on the version of R you have installed.\n\nErrors\nMost words aren’t the name of an object, so if you forget to enclose a character value with quotes (which is easily done), you are likely to encounter an error like this:\n\nhello\n\n“Error: object ‘hello’ not found” tells us fairly straightforwardly what the problem is: there is no object called hello.\nThis is the first of many errors you are going to see on this course! What if, for example, we try to multiply two strings, an operation that doesn’t make sense?\n\n\"Hello world!\" * \"Goodbye, world...\"\n\nThis time the message (“non-numeric argument to binary operator”) is pretty cryptic, which is unfortunately quite common with R. Essentially what it means is that R does not know how to add (a “binary operation”) something that is not a number (a “non-numeric argument”). But however cryptic they are, it’s important that you pay attention to errors when they occur. R never raises errors without reason and it is unlikely that you will be able to continue with your work until you have resolved them.\n\n\n\n\n\n\nDeciphering R error messages\n\n\n\nAs you get used to the jargon used in R’s error and warning messages, you will find that they do actually explain what the problem is. In the meantime, apart from asking your instructor, you can always try just pasting the error into a search engine. Unless you’re doing something truly exotic, it is very likely that someone else has encountered it before and has explained what it means in ordinary language.\nWhen you run more than one line of R code at a time, an error in one line is likely to produce errors in subsequent code. In these circumstances, it’s important to start investigating the problem with the first error encountered. If you encountered an error when trying to create an object, for example, you might subsequently get the “object not found” error when trying to use it – but this doesn’t tell you the root of the problem.\n\n\n\n\nAssignment\nThe R environment is initialised with a certain number of in-built objects, like version. Much more useful, however, is creating objects yourself. For this, we use the assignment operator, <-:\n\nx <- 2\nx\n\nWhat is happening here? In the first line, we assign the value 2 to the object x. In the second line, we ask R to print the object x, which is 2.\nAssignment is how we can start to build up routines that are more complex than those we could do on a calculator. For example, we can break down the exercise of calculating the mean into several steps:\n\ntotal <- 10 + 20 + 30 + 40 + 50\nn <- 5\ntotal / n\n\nAs you populate the R environment with objects, it can be easy to get lost. For example, what if I forget that I’ve already used the name n and reassign it to something else? Then if I try to calculate the mean again:\n\nn <- \"N\"\ntotal / n\n\nEntering ls() lists the objects currently in the R environment, so we can keep track:\n\nls()\n\nIf you need to clean things up, you can remove objects with rm():\n\nrm(n)\nls()\n\nOr to start completely afresh, simply restart R: objects are not saved between sessions.\n\n\n\n\n\n\nNaming objects\n\n\n\nAs the work you do in R becomes more complicated, choosing good names for objects is crucial for keeping track. There are some hard rules about object names:\n\nObject names can’t contain spaces\nObject names can’t start with a number\nObject names can only contain letters, numbers, _ and .\nObject names are case sensitive (e.g. X is different from x)\n\nAnd some good tips:\n\nPick a convention for separating words (e.g. snake_case or camelCase) and stick to it\nIt is better to use a long and descriptive name (e.g. switzerland_sites) than a short, abstract one (e.g. data)\nDon’t reassign object names unless you have a good reason to\n\n\n\n\n\nExercises\n\nCreate objects containing a) a vector of numbers, b) a single character value and c) the sum of a set of numbers\nWhy does 3sites <- c(\"Stonehenge\", \"Giza\", \"Knossos\") produce an error?\nWhat would you call an object containing the mean site size of Neolithic sites in Germany?\n\n\n\n\nFunctions\nFunctions are a special type of object that do something with other objects or values (called arguments). You have already met several functions in this tutorial: arithmetic operators like +, logical operators like ==, and regular functions like ls().\nThese show two different function syntaxes. The arithmetic and logical operators use infix syntax, with two arguments and the function name (the operator) in the middle:\n\n2 + 2\n\nMost functions, and any that can have more than two arguments, use regular function syntax. This looks something like this:\nfunction(argument1, argument2, argument3)\nls() is a function of this style, which takes no arguments (hence the empty brackets). An example of a function that does take arguments is sum():\n\nsum(10, 20, 30, 40, 50)\n\nFunction arguments can also be objects:\n\nx <- 1:100\nsum(x)\n\n\nExercises\n\nCalculate the mean of these ten random numbers using the sum() function: 15, 14, 80, 51, 77, 49, 66, 43, 29, 87\nWhy is it a bad idea to assign the mean of a variable to a new object called mean?"
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#exploratory-data-analysis-with-r",
+    "href": "tutorials/eda_with_r.html#exploratory-data-analysis-with-r",
+    "title": "Exploring data with R",
+    "section": "Exploratory data analysis with R",
+    "text": "Exploratory data analysis with R\nNow you’re familiar with the fundamental building blocks of the R environment, we’re ready to put them into action in exploring some data. For this, follow sections 2.1 and 2.2 in R for Data Science (2nd edition), including the exercises."
+  },
+  {
+    "objectID": "tutorials/eda_with_r.html#extension-exercises",
+    "href": "tutorials/eda_with_r.html#extension-exercises",
+    "title": "Exploring data with R",
+    "section": "Extension exercises",
+    "text": "Extension exercises\n\nReview the highlighted concepts in this tutorial and make sure that your notes cover them.\nIdentify and fix the errors in the following code:\n\n\nlibary(todyverse)\n\nggplot(dTA = mpg) + \n  geom_point(maping = aes(x = displ y = hwy)) +\n  geom_smooth(method = \"lm)"
+  },
+  {
+    "objectID": "tutorials/summary_statistics.html",
+    "href": "tutorials/summary_statistics.html",
+    "title": "Summary statistics",
+    "section": "",
+    "text": "In this tutorial we will look at statistics used to describe or summarise characteristics of a variable such as its , central tendency (‘average’), dispersion, or distribution. You will learn how to use the R package dplyr to filter, mutate, arrange, group, and summarise data."
+  },
+  {
+    "objectID": "tutorials/visualising_distributions.html",
+    "href": "tutorials/visualising_distributions.html",
+    "title": "Visualising distributions",
+    "section": "",
+    "text": "This tutorial is the first of two covering visualisations as a tool for exploratory data analysis. It introduces the package ggplot2, which provides a flexible ‘grammar of graphics’ for visualising data in R.\nThis tutorial focuses on visualising the distribution of data using bar plots, histograms, and density plots."
+  },
+  {
+    "objectID": "tutorials/visualising_distributions.html#prerequisites",
+    "href": "tutorials/visualising_distributions.html#prerequisites",
+    "title": "Visualising distributions",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nHadley Wickham, The Role of Visualization in Exploratory Data Analysis (video)\n\nIf you haven’t already, install the ggplot2 and islay packages. To install islay you will first need to install devtools; Windows users will additionally need RTools."
+  },
+  {
+    "objectID": "tutorials/visualising_distributions.html#objectives",
+    "href": "tutorials/visualising_distributions.html#objectives",
+    "title": "Visualising distributions",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this tutorial you should:\n\nBe able to generate questions about the distribution of a variable\nUnderstand the structure of the ‘grammar of graphics’\nKnow how to produce bar plots, box plots, histograms, and density plots in R using ggplot2"
+  },
+  {
+    "objectID": "tutorials/visualising_distributions.html#exploring-data-generating-questions",
+    "href": "tutorials/visualising_distributions.html#exploring-data-generating-questions",
+    "title": "Visualising distributions",
+    "section": "Exploring data – generating questions",
+    "text": "Exploring data – generating questions\nEDA is fundamentally a process of asking questions of data. By generating a large number of questions, which explore different facets of different variables in our dataset, we hope to narrow down on the subset of questions that are interesting or reveal interesting patterns. At this point we don’t mean archaeological questions, but statistical ones:\n\nWhat variables are in my dataset?\nWhat type of variable are they?\nWhat variation is there in individual variables (what is their distribution)?\nWhat variation is there between individual variables (what is their relationship)?\n\nToday we will begin exploring the first three types of questions with the islay_sites dataset from the islay package. You can load it into R like so:\n\nlibrary(islay)\ndata(islay_sites)\n\nThis is a data frame, an import type of object in R that collects multiple vectors (of different types) into a table.\n\nExercises\n\nHow many sites are there in the islay_sites dataset?\nWhat information is recorded about sites in the islay_sites dataset?"
+  },
+  {
+    "objectID": "tutorials/visualising_distributions.html#types-of-variable",
+    "href": "tutorials/visualising_distributions.html#types-of-variable",
+    "title": "Visualising distributions",
+    "section": "Types of variable",
+    "text": "Types of variable\nIn statistics, we break down variables (measurements of a particular quality of a thing) into two basic types: categorical variables are those that can be one of a fixed set of choices (like the colour of an object); numerical variables can take any of a range of values that can be interpreted as numbers (like the length of an object).\nThese are further divided into two sub-types each. Categorical variables can be nominal, in which the values are arbitrary (like colours), or ordinal, where they can be arranged in a sequence (like opinion, disagree – agree – strongly agree, etc.). Numerical variables can be discrete (whole numbers, typically from counts) or continuous (real numbers, typically from measurements).\n\nExercises\n\nGive an archaeological example of a nominal categorical variable, an ordinal categorical variable, a continuous numerical variable, a discrete numerical variable.\nWhich of the six data types could be used to represent each of these statistical types in R?\nWhat type of variable is each column of islay_sites?"
+  },
+  {
+    "objectID": "tutorials/visualising_distributions.html#the-grammar-of-graphics",
+    "href": "tutorials/visualising_distributions.html#the-grammar-of-graphics",
+    "title": "Visualising distributions",
+    "section": "The Grammar of Graphics",
+    "text": "The Grammar of Graphics\nIf you haven’t already, follow sections 2.1 and 2.2 in R for Data Science (2nd edition), for an introduction to plotting with ggplot2."
+  },
+  {
+    "objectID": "tutorials/visualising_distributions.html#bar-plots",
+    "href": "tutorials/visualising_distributions.html#bar-plots",
+    "title": "Visualising distributions",
+    "section": "Bar plots",
+    "text": "Bar plots\nThe distribution of categorical variable is almost best visualised using a bar plot.\nBar plots are created in ggplot2 using the geom_bar geometry. If we give this only one aesthetic, it will default to plotting the frequency of each category – that is, how many rows there are with each unique value. For example, using the islay_sites dataset from islay, we could plot the number of sites assigned to each period:\n\nlibrary(ggplot2)\n\nggplot(islay_sites, aes(period)) +\n    geom_bar()\n\n\n\n\nNotice that the default order of the x axis is alphabetical. You’ll usually want to change this to something meaningful: in this case, the periods form a sequence and thus have a natural order. To reorder a categorical axis in ggplot2, you have to transform the variable used to generate it into a factor. To do this we can use the factor() function, specifying the possible levels (periods), in order. We’ll want to use this order every time we plot by period, so we’ll assign the newly created factor back to the period column of our data frame.\n\nperiods <- c(\"Mesolithic\", \"Mesolithic & Later Prehistoric\", \"Later Prehistoric\")\nislay_sites$period <- factor(islay_sites$period, periods)\nggplot(islay_sites, aes(period)) +\n    geom_bar()\n\n\n\n\n\n\n\n\n\n\nFactors\n\n\n\nFactors are how R represents categorical values with a known set of possible values or levels. They are especially useful when the levels are ordered because it provides a way to encode the order into the object itself, which is then automatically picked up by ggplot2 and other packages. The forcats package has a number of useful tools for working with factors, and its cheatsheet is well worth a look.\n\n\nIf what you’re plotting doesn’t have an intrinsic order—the source of information about our sites, for example—a good rule of thumb is to order the bars by size. We can do this easily using fct_infreq() from forcats:\n\nlibrary(forcats)\nggplot(islay_sites, aes(fct_infreq(source))) +\n    geom_bar()\n\n\n\n\nNotice that it automatically places NA values at the end, even though this is the second-largest category.\n\nExercises\n\nWhat can we say about the distribution of sites by period on Islay?\nWhat difference does it make that fct_infreq() inside the ggplot() call in the sources plot, but factor() is outside of it in the periods plot?\n\n\n\nHistograms & density plots\nThe most common way of visualising a numerical variable is a histogram. Visually similar to a bar plot, a histogram sorts each case of the variable into one of a number of equally-spaced bins, and then draws bars corresponding to the frequency of each bin. Histograms are created in ggplot2 using the geom_histogram() geometry which, like geom_bar, only requires one aesthetic. We could use a histogram to visualise the distribution of chipped stone artefacts across the sites on Islay:\n\nggplot(islay_sites, aes(total_chipped_stone)) +\n    geom_histogram()\n\n\n\n\nYou will receive two warnings when generating this plot:\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\nWarning: Removed 11 rows containing non-finite values (`stat_bin()`).\nThe second warning means that 11 sites with an NA value in the total_chipped_stone column have been removed from the plot. We can safely ignore this, because it is what we want to happen.\nThe first warning tells us that ggplot has automatically chosen how many bins it should plot (30) and advises us to set a ‘better’ value explicitly. But what is a ‘better’ value? Let’s take a guess and try bin_width = 50 to start with (meaning that the first bin will be 0 to 50, then 50 to 100, etc.):\n\nggplot(islay_sites, aes(total_chipped_stone)) +\n    geom_histogram(binwidth = 50)\n\n\n\n\nThis looks reasonable, but the pattern is rather different from the first plot. Let’s try with a very small and a very large value:\n\nggplot(islay_sites, aes(total_chipped_stone)) +\n    geom_histogram(binwidth = 5)\n\n\n\nggplot(islay_sites, aes(total_chipped_stone)) +\n    geom_histogram(binwidth = 200)\n\n\n\n\nYou can see that the shape of a histogram is highly dependent on the choice of bin width, with different ‘peaks’ and ‘troughs’ appearing and disappearing between the plots. There is no objectively best bin width; you must experiment to find one that is suitable, given your knowledge of the data.\n\n\nExercises\n\nTry using geom_density() instead of geom_histogram(): what is the difference?\nDo density plots have the same problem of bin selection as a histogram?"
+  },
+  {
+    "objectID": "tutorials/visualising_relationships.html",
+    "href": "tutorials/visualising_relationships.html",
+    "title": "Visualising relationships",
+    "section": "",
+    "text": "In this tutorial we will continue to learn about visualisation as a tool for exploratory data analysis. We will look at ways of visualising the relationship between two or more variables using bar and column plots, scatterplots, additional aesthetics and facets."
+  },
+  {
+    "objectID": "tutorials/visualising_relationships.html#objectives",
+    "href": "tutorials/visualising_relationships.html#objectives",
+    "title": "Visualising relationships",
+    "section": "Objectives",
+    "text": "Objectives\nBy the end of this tutorial you should:\n\nBe able to generate questions about the relationship between two or more variables\nKnow how to produce bar plots, multiple density plots, stacked bar plots, and scatter plots in R using ggplot2\nBe able to refine plots for communication and export them from R"
+  },
+  {
+    "objectID": "tutorials/visualising_relationships.html#prerequisites",
+    "href": "tutorials/visualising_relationships.html#prerequisites",
+    "title": "Visualising relationships",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nEdward Tufte, The Visual Display Of Quantitative Information (2nd edition), pp. 91–138:\n\nChapter 4, “Data–Ink and Graphical Redesign”\nChapter 5, “Chartjunk: Vibrations, Grids, and Ducks”\nChapter 6, “Data–Ink Maximization and Graphical Design”"
+  },
+  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
     "text": "Week\nTutorial\nPrerequisites\n\n\n\n\n09\nIntroduction\n—\n\n\n\nExploring archaeological data\n\n\n\n10\nExploring data with R\nEvergreen notesInstall R on your computer\n\n\n11\nVisualising distributions\n The Role of Visualization in Exploratory Data Analysis\n\n\n12\nVisualising relationships\n—\n\n\n13\nSummary statistics\n—\n\n\n\nWorking with archaeological data\n\n\n\n14\nImporting and transforming data\n—\n\n\n15\nSpring vacation\n—\n\n\n16\nData analysis workflows\n—\n\n\n17\nReplication Workshop I\n—\n\n\n18\nReplication Workshop II\n—\n\n\n\nModelling archaeological data\n\n\n\n19\nHypothesis testing\n—\n\n\n20\nRegression\n—\n\n\n21*\nMultivariate analysis\n—\n\n\n22\nReview & course evaluation\n—\n\n\n\n* Substitute instructor"
+  },
+  {
+    "objectID": "bibliography.html",
+    "href": "bibliography.html",
+    "title": "Bibliography & Further Reading",
+    "section": "",
+    "text": "Shennan, S. 1997. Quantifying Archaeology. Second edition.\nDrennan, R. D. Statistics for Archaeologists: A Commonsense Approach. Second edition."
+  },
+  {
+    "objectID": "info.html",
+    "href": "info.html",
+    "title": "Information for students",
+    "section": "",
+    "text": "We are dedicated to providing a welcoming and supportive learning environment for all students, regardless of their background, identity, physical appearance, or manner of communication. Any form of language or behavior used to exclude, intimidate, or cause discomfort will not be tolerated. This applies to all course participants (instructor, students, guests). In order to foster a positive and professional learning environment, we ask the following:\n\nPlease let us know if you have a name or set of preferred pronouns that you would like us to use\nPlease let us know if anyone in class says something that makes you feel uncomfortable\n\nIf an instructor should be the one to say or do something that makes a student uncomfortable, you should feel free to contact the Director of the Prehistoric Archaeology of Bern University.\n\nIf you believe you have been a victim of any form of discrimination, you have the right to report it to the University.\n\nIn addition, we encourage the following kinds of behaviors:\n\nUse welcoming and inclusive language\nShow courtesy and respect towards others\nAcknowledge different viewpoints and experiences\nGracefully accept constructive criticism\n\nAlthough we strive to create and use inclusive materials in this course, there may be overt or covert biases in the course material due to the lens with which it was written. Your suggestions about how to improve the value of diversity in this course are encouraged and appreciated.\nPlease note: The University of Bern is committed to a non-discriminatory environment. This applies in particular to discrimination on the basis of gender (sexism) and sexual assaults (sexual harassment): we are all entitled to protection of our personal integrity at work and during our studies and to the respect of our limits. The University of Bern is also legally obliged to protect its members from sexual harassment. In particular, superiors are also responsible for looking out and reacting."
+  },
+  {
+    "objectID": "info.html#access-accommodations",
+    "href": "info.html#access-accommodations",
+    "title": "Information for students",
+    "section": "Access & accommodations",
+    "text": "Access & accommodations\nAll students deserve access to the full range of learning experiences, and we are committed to creating inclusive and accessible learning environments consistent with federal and state laws. If you feel like your performance in class is being impacted by your experiences outside of class, please talk with us.\n\nDisabilities\nIf you have already established accommodations with Disability Resources for Students (DRS), please communicate your approved accommodations to us at your earliest convenience so we can discuss your needs in this course. If you have not yet established services through DRS, but have a temporary health condition or permanent disability that requires accommodations (e.g., mental health, learning, vision, hearing, physical impacts), you are welcome to contact DRS at 206-543-8924 or via email or their website. DRS offers resources and coordinates reasonable accommodations for students with disabilities and/or temporary health conditions. Reasonable accommodations are established through an interactive process between you, your instructor(s) and DRS.\n\n\nReligious observances\nStudents who expect to miss class or assignments as a consequence of their religious observance will be provided with a reasonable accommodation to fulfill their academic responsibilities. Absence from class for religious reasons does not relieve students from responsibility for the course work required during the period of absence. It is the responsibility of the student to provide the instructor with advance notice of the dates of religious holidays on which they will be absent. Students who are absent will be offered an opportunity to make up the work, without penalty, within a reasonable time, as long as the student has made prior arrangements."
+  },
+  {
+    "objectID": "info.html#academic-integrity",
+    "href": "info.html#academic-integrity",
+    "title": "Information for students",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nFaculty and students at the University of Bern are expected to maintain the highest standards of academic conduct, professional honesty, and personal integrity. Plagiarism, cheating, and other academic misconduct are serious violations of the Scientific Code of Conduct. Students who have been guilty of a violation will receive zero points for the assignment in question."
+  },
+  {
+    "objectID": "info.html#mental-health",
+    "href": "info.html#mental-health",
+    "title": "Information for students",
+    "section": "Mental health",
+    "text": "Mental health\nWe are in the midst of an historic pandemic that is creating a variety of challenges for everyone. If you should feel like you need some help, please consider the following resources available to students.\nIf you are experiencing a life-threatening emergency, please dial 112.\nCounseling Center\nPhone: 031 / 635 24 35"
   }
 ]

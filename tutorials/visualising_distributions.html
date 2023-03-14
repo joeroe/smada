@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -243,6 +306,22 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#exploring-data-generating-questions" id="toc-exploring-data-generating-questions" class="nav-link" data-scroll-target="#exploring-data-generating-questions">Exploring data – generating questions</a>
+  <ul class="collapse">
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  </ul></li>
+  <li><a href="#types-of-variable" id="toc-types-of-variable" class="nav-link" data-scroll-target="#types-of-variable">Types of variable</a>
+  <ul class="collapse">
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1">Exercises</a></li>
+  </ul></li>
+  <li><a href="#the-grammar-of-graphics" id="toc-the-grammar-of-graphics" class="nav-link" data-scroll-target="#the-grammar-of-graphics">The Grammar of Graphics</a></li>
+  <li><a href="#bar-plots" id="toc-bar-plots" class="nav-link" data-scroll-target="#bar-plots">Bar plots</a>
+  <ul class="collapse">
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2">Exercises</a></li>
+  <li><a href="#histograms-density-plots" id="toc-histograms-density-plots" class="nav-link" data-scroll-target="#histograms-density-plots">Histograms &amp; density plots</a></li>
+  <li><a href="#exercises-3" id="toc-exercises-3" class="nav-link" data-scroll-target="#exercises-3">Exercises</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/smada/blob/main/tutorials/visualising_distributions.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/smada/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -273,18 +352,157 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Hadley Wickham, <a href="https://www.youtube.com/watch?v=ZdPNBF6GWBw">The Role of Visualization in Exploratory Data Analysis</a> (video)</li>
 </ul>
-<!--
-## Objectives
+<p>If you haven’t already, install the <a href="https://ggplot2.tidyverse.org/">ggplot2</a> and <a href="https://github.com/joeroe/islay">islay</a> packages. To install islay you will first need to install <a href="https://devtools.r-lib.org/">devtools</a>; Windows users will additionally need <a href="https://cran.r-project.org/bin/windows/Rtools/">RTools</a>.</p>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this tutorial you should:</p>
+<ul>
+<li>Be able to generate questions about the distribution of a variable</li>
+<li>Understand the structure of the ‘grammar of graphics’</li>
+<li>Know how to produce bar plots, box plots, histograms, and density plots in R using ggplot2</li>
+</ul>
+</section>
+<section id="exploring-data-generating-questions" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-data-generating-questions">Exploring data – generating questions</h2>
+<p>EDA is fundamentally a process of asking questions of data. By generating a large number of questions, which explore different facets of different variables in our dataset, we hope to narrow down on the subset of questions that are interesting or reveal interesting patterns. At this point we don’t mean archaeological questions, but statistical ones:</p>
+<ol type="1">
+<li>What <mark>variables</mark> are in my dataset?</li>
+<li>What <mark>type of variable</mark> are they?</li>
+<li>What <mark>variation</mark> is there in individual variables (what is their <mark>distribution</mark>)?</li>
+<li>What <mark>variation</mark> is there between individual variables (what is their <mark>relationship</mark>)?</li>
+</ol>
+<p>Today we will begin exploring the first three types of questions with the <code>islay_sites</code> dataset from the islay package. You can load it into R like so:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(islay)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(islay_sites)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is a <mark>data frame</mark>, an import type of object in R that collects multiple vectors (of different types) into a table.</p>
+<section id="exercises" class="level3">
+<h3 class="anchored" data-anchor-id="exercises">Exercises</h3>
+<ol type="1">
+<li>How many sites are there in the <code>islay_sites</code> dataset?</li>
+<li>What information is recorded about sites in the <code>islay_sites</code> dataset?</li>
+</ol>
+</section>
+</section>
+<section id="types-of-variable" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-variable">Types of variable</h2>
+<p>In statistics, we break down <mark>variables</mark> (measurements of a particular quality of a thing) into two basic types: <mark>categorical</mark> variables are those that can be one of a fixed set of choices (like the colour of an object); <mark>numerical</mark> variables can take any of a range of values that can be interpreted as numbers (like the length of an object).</p>
+<p>These are further divided into two sub-types each. Categorical variables can be <mark>nominal</mark>, in which the values are arbitrary (like colours), or <mark>ordinal</mark>, where they can be arranged in a sequence (like opinion, disagree – agree – strongly agree, etc.). Numerical variables can be <mark>discrete</mark> (whole numbers, typically from counts) or <mark>continuous</mark> (real numbers, typically from measurements).</p>
+<section id="exercises-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercises-1">Exercises</h3>
+<ol type="1">
+<li>Give an archaeological example of a nominal categorical variable, an ordinal categorical variable, a continuous numerical variable, a discrete numerical variable.</li>
+<li>Which of the six <mark>data types</mark> could be used to represent each of these statistical types in R?</li>
+<li>What type of variable is each column of <code>islay_sites</code>?</li>
+</ol>
+</section>
+</section>
+<section id="the-grammar-of-graphics" class="level2">
+<h2 class="anchored" data-anchor-id="the-grammar-of-graphics">The Grammar of Graphics</h2>
+<p>If you haven’t already, follow sections 2.1 and 2.2 in <a href="https://r4ds.hadley.nz/data-visualize.html">R for Data Science</a> (2nd edition), for an introduction to plotting with ggplot2.</p>
+</section>
+<section id="bar-plots" class="level2">
+<h2 class="anchored" data-anchor-id="bar-plots">Bar plots</h2>
+<p>The distribution of <mark>categorical</mark> variable is almost best visualised using a <mark>bar plot</mark>.</p>
+<p>Bar plots are created in ggplot2 using the <code>geom_bar</code> geometry. If we give this only one <mark>aesthetic</mark>, it will default to plotting the <mark>frequency</mark> of each category – that is, how many rows there are with each unique value. For example, using the <code>islay_sites</code> dataset from islay, we could plot the number of sites assigned to each period:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(period)) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualising_distributions_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Notice that the default order of the x axis is alphabetical. You’ll usually want to change this to something meaningful: in this case, the periods form a sequence and thus have a natural order. To reorder a categorical axis in ggplot2, you have to transform the variable used to generate it into a <mark>factor</mark>. To do this we can use the <code>factor()</code> function, specifying the possible <mark>levels</mark> (periods), in order. We’ll want to use this order every time we plot by period, so we’ll <mark>assign</mark> the newly created factor back to the <code>period</code> column of our data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>periods <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mesolithic"</span>, <span class="st">"Mesolithic &amp; Later Prehistoric"</span>, <span class="st">"Later Prehistoric"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>islay_sites<span class="sc">$</span>period <span class="ot">&lt;-</span> <span class="fu">factor</span>(islay_sites<span class="sc">$</span>period, periods)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(period)) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualising_distributions_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Factors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><mark>Factors</mark> are how R represents categorical values with a known set of possible values or <mark>levels</mark>. They are especially useful when the levels are ordered because it provides a way to encode the order into the object itself, which is then automatically picked up by ggplot2 and other packages. The <a href="https://forcats.tidyverse.org/">forcats</a> package has a number of useful tools for working with factors, and its cheatsheet is well worth a look.</p>
+</div>
+</div>
+<p>If what you’re plotting doesn’t have an intrinsic order—the source of information about our sites, for example—a good rule of thumb is to order the bars by size. We can do this easily using <code>fct_infreq()</code> from forcats:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(<span class="fu">fct_infreq</span>(source))) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualising_distributions_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Notice that it automatically places <code>NA</code> values at the end, even though this is the second-largest category.</p>
+<section id="exercises-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercises-2">Exercises</h3>
+<ol type="1">
+<li>What can we say about the distribution of sites by period on Islay?</li>
+<li>What difference does it make that <code>fct_infreq()</code> inside the <code>ggplot()</code> call in the sources plot, but <code>factor()</code> is outside of it in the periods plot?</li>
+</ol>
+</section>
+<section id="histograms-density-plots" class="level3">
+<h3 class="anchored" data-anchor-id="histograms-density-plots">Histograms &amp; density plots</h3>
+<p>The most common way of visualising a <mark>numerical</mark> variable is a <mark>histogram</mark>. Visually similar to a bar plot, a histogram sorts each case of the variable into one of a number of equally-spaced <mark>bins</mark>, and then draws bars corresponding to the frequency of each bin. Histograms are created in ggplot2 using the <code>geom_histogram()</code> geometry which, like <code>geom_bar</code>, only requires one aesthetic. We could use a histogram to visualise the distribution of chipped stone artefacts across the sites on Islay:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(total_chipped_stone)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualising_distributions_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>You will receive two warnings when generating this plot:</p>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+Warning: Removed 11 rows containing non-finite values (`stat_bin()`).</code></pre>
+<p>The second warning means that 11 sites with an <code>NA</code> value in the <code>total_chipped_stone</code> column have been removed from the plot. We can safely ignore this, because it is what we want to happen.</p>
+<p>The first warning tells us that ggplot has automatically chosen how many bins it should plot (<code>30</code>) and advises us to set a ‘better’ value explicitly. But what is a ‘better’ value? Let’s take a guess and try <code>bin_width = 50</code> to start with (meaning that the first bin will be 0 to 50, then 50 to 100, etc.):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(total_chipped_stone)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualising_distributions_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This looks reasonable, but the pattern is rather different from the first plot. Let’s try with a very small and a very large value:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(total_chipped_stone)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualising_distributions_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(total_chipped_stone)) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">200</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="visualising_distributions_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>You can see that the shape of a histogram is highly dependent on the choice of bin width, with different ‘peaks’ and ‘troughs’ appearing and disappearing between the plots. There is no objectively best bin width; you must experiment to find one that is suitable, given your knowledge of the data.</p>
+</section>
+<section id="exercises-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercises-3">Exercises</h3>
+<ol type="1">
+<li>Try using <code>geom_density()</code> instead of <code>geom_histogram()</code>: what is the difference?</li>
+<li>Do density plots have the same problem of bin selection as a histogram?</li>
+</ol>
 
 
-## Key concepts
-
-## Foundation
-
-## Extensions
--->
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
