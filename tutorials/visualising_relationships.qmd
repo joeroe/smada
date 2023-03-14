@@ -3,16 +3,33 @@ title: "Visualising relationships"
 ---
 
 In this tutorial we will continue to learn about visualisation as a tool for exploratory data analysis.
-We will look at ways of visualising the <mark>relationship</mark> between two or more variables using bar plots, scatterplots, additional aesthetics and <mark>facets</mark>.
+We will look at ways of visualising the <mark>relationship</mark> between two or more variables using bar and column plots, scatterplots, additional aesthetics and <mark>facets</mark>.
 
-<!--
 ## Objectives
+
+By the end of this tutorial you should:
+
+* Be able to generate questions about the relationship between two or more variables
+* Know how to produce bar plots, multiple density plots, stacked bar plots, and scatter plots in R using ggplot2
+* Be able to refine plots for communication and export them from R
 
 ## Prerequisites
 
-## Key concepts
+* Edward Tufte, *[The Visual Display Of Quantitative Information](https://archive.org/details/the-visual-display-of-quantitative-information-2ed-by-tufte-edward-r.-z-lib.org)* (2nd edition), pp. 91–138:
+  * Chapter 4, "Data–Ink and Graphical Redesign"
+  * Chapter 5, "Chartjunk: Vibrations, Grids, and Ducks"
+  * Chapter 6, "Data–Ink Maximization and Graphical Design"
 
+<!--
 ## Foundation
+
+* Questions: correlation and causation
+  * When do you need models
+* Visualising distributions
+  * Column plots
+  * Stacked/group bar plots
+* Graphics for communications
+* Exporting plots
 
 ## Extensions
 -->

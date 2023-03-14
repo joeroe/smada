@@ -7,9 +7,9 @@ title: "Schedule"
 | 09   | [Introduction](tutorials/introduction.qmd) | ---           |
 |      | **Exploring archaeological data**                |
 | 10   | [Exploring data with R](tutorials/eda_with_r.qmd)       | [{{< fa link >}}Evergreen notes](https://notes.andymatuschak.org/Evergreen_notes)<br>[Install R](https://cran.r-project.org/) on your computer |
-| 11   | Visualising distributions        | [{{< fa video >}}  The Role of Visualization in Exploratory Data Analysis](https://www.youtube.com/watch?v=ZdPNBF6GWBw)           |
-| 12   | Visualising relationships        | ---           |
-| 13   | Summary statistics               | ---           |
+| 11   | [Visualising distributions](tutorials/visualising_distributions.qmd)        | [{{< fa video >}}  The Role of Visualization in Exploratory Data Analysis](https://www.youtube.com/watch?v=ZdPNBF6GWBw)           |
+| 12   | [Visualising relationships](tutorials/visualising_relationships.qmd)        | ---           |
+| 13   | [Summary statistics](tutorials/summary_statistics.qmd)               | ---           |
 |      | **Working with archaeological data**             |
 | 14   | Importing and transforming data  | ---           |
 | 15   | *Spring vacation*                | ---           |
