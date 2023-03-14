@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smada.joeroe.io/index.html</loc>
-    <lastmod>2023-03-14T10:59:00.464Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/introduction.html</loc>
-    <lastmod>2023-03-14T10:59:00.631Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/eda_with_r.html</loc>
-    <lastmod>2023-03-14T10:59:01.531Z</lastmod>
+    <loc>https://smada.joeroe.io/info.html</loc>
+    <lastmod>2023-03-14T11:32:27.183Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/tutorials/summary_statistics.html</loc>
-    <lastmod>2023-03-14T10:59:01.684Z</lastmod>
+    <lastmod>2023-03-14T11:32:27.560Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/tutorials/visualising_distributions.html</loc>
-    <lastmod>2023-03-14T10:59:03.778Z</lastmod>
+    <lastmod>2023-03-14T11:32:32.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/tutorials/eda_with_r.html</loc>
+    <lastmod>2023-03-14T11:32:34.093Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/tutorials/introduction.html</loc>
+    <lastmod>2023-03-14T11:32:34.430Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/tutorials/visualising_relationships.html</loc>
-    <lastmod>2023-03-14T10:59:03.944Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/schedule.html</loc>
-    <lastmod>2023-03-14T10:59:04.101Z</lastmod>
+    <lastmod>2023-03-14T11:32:34.776Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/bibliography.html</loc>
-    <lastmod>2023-03-14T10:59:04.241Z</lastmod>
+    <lastmod>2023-03-14T11:32:35.136Z</lastmod>
   </url>
   <url>
-    <loc>https://smada.joeroe.io/info.html</loc>
-    <lastmod>2023-03-14T10:59:04.421Z</lastmod>
+    <loc>https://smada.joeroe.io/index.html</loc>
+    <lastmod>2023-03-14T11:32:35.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/schedule.html</loc>
+    <lastmod>2023-03-14T11:32:35.903Z</lastmod>
   </url>
 </urlset>
