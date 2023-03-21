@@ -20,16 +20,58 @@ By the end of this tutorial you should:
   * Chapter 5, "Chartjunk: Vibrations, Grids, and Ducks"
   * Chapter 6, "Data–Ink Maximization and Graphical Design"
 
-<!--
-## Foundation
+<!-- 
+## Generating questions about relationships
+
+Last week we looked at using visualisation to answer questions about the variation of a variable (its <mark>distribution</mark>).
+Although essential for describing and understanding the nature of your dataset, questions about a single variable have a fundamentally limited explanatory value.
+
+This week we will start looking at the <mark>covariation</mark> between two (or more) variables – in plain terms, the relationship between them.
+With this we can start to gain insights into possible <mark>causality</mark>
 
 * Questions: correlation and causation
+  * Some examples
+  * Correlation ≠ causation
   * When do you need models
-* Visualising distributions
-  * Column plots
-  * Stacked/group bar plots
-* Graphics for communications
-* Exporting plots
 
-## Extensions
+## Lithic assemblages from Islay
+
+For this tutorial we will use the `islay_lithics` dataset.
+Load it with:
+
+```{r}
+library(islay)
+data(islay_lithics)
+```
+
+We can use the `head()` function to get a quick preview of the data frame:
+
+```{r}
+head(islay_lithics)
+```
+
+Because this is an in-built dataset of the package.
+
+As with the last dataset, it will be useful to turn the `period` column into a <mark>factor</mark> now, so that it will automatically be ordered in our subsequent plots:
+
+```{r}
+periods <- c("Mesolithic", "Mesolithic & Later Prehistoric", "Later Prehistoric")
+islay_lithics$period <- factor(islay_lithics$period, periods)
+```
+
+### Exercises
+
+1. What units is the area of the site given in in the `islay_lithics` dataset?
+
+## Visualising relationships
+
+* Numerical and categorical: box plots or multiple density
+* Two categorical: stacked bar plot
+* Two numerical: scatter plots
+* Three or more variables: additional aesthetics, facets
+
+## Exporting plots
+
+* Think about what Tufte says
+
 -->
