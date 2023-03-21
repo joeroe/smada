@@ -8,8 +8,8 @@ title: "Schedule"
 |      | **Exploring archaeological data**                |
 | 10   | [Exploring data with R](tutorials/eda_with_r.qmd)       | [{{< fa link >}}Evergreen notes](https://notes.andymatuschak.org/Evergreen_notes)<br>[Install R](https://cran.r-project.org/) on your computer |
 | 11   | [Visualising distributions](tutorials/visualising_distributions.qmd)        | [{{< fa video >}}  The Role of Visualization in Exploratory Data Analysis](https://www.youtube.com/watch?v=ZdPNBF6GWBw)           |
-| 12   | [Visualising relationships](tutorials/visualising_relationships.qmd)        | [{{< fa book >}} The Visual Display of Quantitative Information](https://archive.org/details/the-visual-display-of-quantitative-information-2ed-by-tufte-edward-r.-z-lib.org), ch. 4, 5 & 6 |
-| 13   | [Summary statistics](tutorials/summary_statistics.qmd)               | ---           |
+| 12   | [Visualising relationships](tutorials/visualising_relationships.qmd)        | [{{< fa book >}} *The Visual Display of Quantitative Information*](https://archive.org/details/the-visual-display-of-quantitative-information-2ed-by-tufte-edward-r.-z-lib.org), ch. 4, 5 & 6 |
+| 13   | [Summary statistics](tutorials/summary_statistics.qmd)               | {{< fa book >}} *Quantifying Archaeology*, [ch. 4](https://doi.org/10.1515/9781474472555-005)            |
 |      | **Working with archaeological data**             |
 | 14   | Importing and transforming data  | ---           |
 | 15   | *Spring vacation*                | ---           |

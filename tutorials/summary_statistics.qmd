@@ -5,10 +5,12 @@ title: "Summary statistics"
 In this tutorial we will look at statistics used to describe or summarise characteristics of a variable such as its , <mark>central tendency</mark> ('average'), <mark>dispersion</mark>, or <mark>distribution</mark>.
 You will learn how to use the R package [dplyr](https://dplyr.tidyverse.org/) to <mark>filter</mark>, <mark>mutate</mark>, <mark>arrange</mark>, <mark>group</mark>, and <mark>summarise</mark> data.
 
+## Prerequisites
+
+* Chapter 4 ("Numerical Summaries of a Single Variable"), in Stephen Shennan (1998), *Quantifying Archaeology*, 2nd edition. <https://doi.org/10.1515/9781474472555-005>
+
 <!--
 ## Objectives
-
-## Prerequisites
 
 ## Key concepts
 
