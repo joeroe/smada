@@ -206,9 +206,9 @@ The standard deviation is widely used because it is easy to calculate, robust to
 A useful rule of thumb for interpreting the standard deviation is the <mark>68–95–99.7 rule</mark>.
 This states that, if the variable is normally distributed:
 
-*. c. 68% of the data lies within one standard deviation of the mean
-*. c. 95% of the data lies within one standard deviation of the mean
-*. c. 99.7% of the data lies within one standard deviation of the mean
+* c. 68% of the data lies within one standard deviation of the mean
+* c. 95% of the data lies within one standard deviation of the mean
+* c. 99.7% of the data lies within one standard deviation of the mean
 
 ### Exercises
 
