@@ -1,0 +1,161 @@
+---
+title: "Importing and tidying data"
+execute:
+  output: false
+---
+
+So far, the data we have used in the course has come prepared in packages.
+In practice, we are much more likely to work with data from other sources (published datasets, data entered in a spreadsheet, data from APIs, etc.) that need to be <mark>imported</mark> in R.
+This tutorial introduces tools for importing data in various formats into R and—since real-world data rarely comes to us perfectly well-formatted—how to transform data with [dplyr](https://dplyr.tidyverse.org/).<!-- and tidy messy data with [tidyr](https://tidyr.tidyverse.org/).-->
+
+## Objectives
+
+This tutorial should enable you to:
+
+* Import data in delimited text (e.g. CSV) and spreadsheet (e.g. XSLX) files into R <!-- and geospatial (e.g. Shapefile) formats -->
+* Use dplyr to filter, mutate, group, and summarise imported data
+<!-- TOO MUCH?: 
+* Use tidyr
+  -->
+
+## Prerequisites
+
+* Broman & Woo (2017), [Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989), *The American Statistician* 72(1): 2–10.
+
+## Importing data
+
+Whatever the format, importing data into R typically involves three steps:
+
+1. <mark>Read</mark> the original file into R with an appropriate function
+2. Resolve any problems that prevent R from <mark>parsing</mark> the data correctly (e.g. remove special characters from column names, skip malformed rows)
+3. <mark>Assign</mark> the imported data to an R object with an appropriate type (e.g. a data frame)
+
+### Delimited text
+
+Delimited text is a very widely used format for storing tabular data as <mark>plain text</mark>, where each row has its own line and the columns are separated by a <mark>delimiter</mark>.
+The most common variant is comma-separated values (CSV, `.csv`), followed by tab-separated values (TSV, `.tsv`).
+Microsoft Office software often exports files with semicolon or space-separated values using the generic file extension `.txt`.
+
+There are number of functions for reading delimited text files included in base R (e.g. `read.csv()`, `read.delim()`).
+However, I recommend using the package [readr](https://readr.tidyverse.org/) instead, because it has a more consistent syntax and can resolve a number of common parsing problems automatically.
+
+We can read a standard CSV file with `read_csv()`, without any additional arguments.
+For example, we can read [nerd.csv](../data/nerd.csv), from the [NERD database](https://github.com/apalmisano82/NERD/) of radiocarbon dates from the Near East:
+
+```{r}
+library(readr)
+read_csv("../data/nerd.csv")
+```
+
+The first argument is the <mark>path</mark> to the file, relative to R's <mark>working directory</mark>.
+You will need to adjust this to reflect the location where you saved `nerd.csv`.
+
+::: {.callout-tip}
+### File paths in R
+R uses Unix-style file paths to locate files.
+Directories are separated by a forward slash (`/`), e.g. `/home/user/path/to/file.txt` – even on Windows, which usually uses a backslash (`\`).
+The name of the file must always be given in full, i.e. with its file extension (`.txt` in the previous example).
+If the path starts with a slash (or on Windows, a drive label like `C:`), it is an <mark>absolute path</mark>.
+Absolute paths will work to locate a file anywhere on your computer, regardless of how R was started, but will almost certainly not work on other computers.
+
+It's usually better to use a <mark>relative path</mark>, especially if you intend to share your script with others.
+These locate files relative to R's <mark>working directory</mark>, which in turn depends on how R was launched.
+You can find what your current working directory is with `getwd()`.
+If our working directory contained a directory named `data` with in a file in it called `file.csv`, we could reference that with the relative path `data/file.csv`.
+
+Most readr functions also allow you to replace a path with a URL, in which case it downloads the file to a temporary directory before reading it.
+:::
+
+Notice the message about column types.
+readr will try to guess what type of vector each column holds – usually correctly.
+But if you need to correct something, or don't want to see the message, we can specify column types manually using the `col_types` argument (see `?read_csv` for instructions).
+
+There are similar functions for other standardised types, for example tab-separated values like [nerd.tsv](../data/nerd.tsv):
+
+```{r}
+read_tsv("../data/nerd.tsv")
+```
+
+Or we can use `read_delim()` for generic delimited text.
+For example, 'European-style' CSVs commonly use a comma (`,`) as a decimal separator, and so to avoid confusion use a semicolon (`;`) as a delimiter.
+[nerd.txt](data/nerd_euro.txt) is an example of this format, which we can read by adjusting the `delim` and `locale` arguments:
+
+```{r}
+read_delim("../data/nerd.txt", delim = ";", locale = locale(decimal_mark = ","))
+```
+
+Although for this specific variant, there is actually a shortcut in `read_csv2()`:
+
+```{r}
+read_csv2("../data/nerd.txt")
+```
+
+Note that the file extension (`.txt`) doesn't have to match the function used.
+
+The result of all these `read_*` functions is a data frame (or a variant of it called a <mark>tibble</mark>), which we can assign to an R object as usual:
+
+```{r}
+nerd <- read_csv2("../data/nerd.txt")
+```
+
+### Spreadsheets
+
+[readxl](https://readxl.tidyverse.org/) provides functions for reading spreadsheets in Excel formats (`.xls`, `.xlsx`) with a readr-style syntax.
+For example, [14cpalaeolithic.xlsx](../data/14cpalaeolithic.xlsx) contains [another radiocarbon database](https://ees.kuleuven.be/en/geography/projects/14c-palaeolithic/download) in Excel format:
+
+```{r}
+library(readxl)
+read_xlsx("../data/14cpalaeolithic.xlsx")
+```
+
+A useful feature of this function is that we can control the sheet and range (using Excel-style syntax) we want to use.
+In this case, the radiocarbon data in 14c-palaeolithic is only a subset of the first sheet:
+
+```{r}
+read_xlsx("../data/14cpalaeolithic.xlsx", sheet = "Blad1", range = "A1:S35086")
+```
+
+In this way we can avoid importing a lot of data we won't use.
+
+<!--
+### Geospatial formats
+
+Geospatial formats (e.g. shapefiles, geopackages, GeoJSON) can be read into R with the [sf](https://r-spatial.github.io/sf) package.
+
+* Geospatial import
+  * Shapefile
+  * Explain sf object
+  * Import CSV and turn into sf
+-->
+
+### Exercises
+
+1. Import [neonet.tsv](../data/neonet.tsv) (from <https://doi.org/10.5334/joad.87>) into R
+2. What other options can we control with `locale()`?
+3. Import [flohr_et_al.xlsx](../data/flohr_et_al.xlsx) (from <https://doi.org/10.1016/j.quascirev.2015.06.022>) into R
+4. Try passing the argument `.name_repair = "universal"` when importing `flohr_et_al.xlsx`: what changes? Why is this useful?
+
+## Data transformation
+
+<!-- Move to previous week? -->
+
+Work through [Chapter 5 – Data Transformation](https://r4ds.had.co.nz/transform.html) in *R for Data Science* (1st ed.), including all code examples and exercises.
+
+### Exercises
+
+Using dplyr and the `islay_lithics` datset:
+
+1. Add a column to the data frame calculating the total number of lithics
+2. What are the top 3 sites by total number of lithics?
+3. How many sites have 10 or more total lithics?
+4. Of these sites, calculate the average number of lithics per site for each period
+
+<!-- TOO MUCH?
+## Tidying data
+
+Work through [Chapter 12 – Tidy Data](https://r4ds.had.co.nz/transform.html) of *R for Data Science* (1st ed.), including all code examples and exercises.
+
+### Exercises
+
+TODO: need a messy example dataset
+-->

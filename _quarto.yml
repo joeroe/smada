@@ -35,8 +35,8 @@ website:
             - tutorials/summary_statistics.qmd
         - section: "Working with archaeological data"
           contents:
-            - tutorials/.tidy_data.qmd
-            - tutorials/.workflows.qmd
+            - tutorials/tidy_data.qmd
+            - tutorials/workflows.qmd
             - tutorials/.replication.qmd
         - section: "Modelling archaeological data"
           contents:
