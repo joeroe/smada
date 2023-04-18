@@ -1,0 +1,17 @@
+---
+title: "Importing and tidying data"
+---
+
+So far, the data we have used in the course has come prepared in packages.
+In practice, we are much more likely to work with data from other sources (published datasets, data entered in a spreadsheet, data from APIs, etc.) that need to be <mark>imported</mark> in R.
+
+
+## Objectives
+
+## Prerequisites
+
+## Key concepts
+
+## Foundation
+
+## Extensions
