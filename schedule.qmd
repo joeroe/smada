@@ -14,8 +14,8 @@ title: "Schedule"
 | 14   | [Importing and transforming data](tutorials/tidy_data.qmd)  | [{{< fa book >}} Data Organization in Spreadsheets](https://doi.org/10.1080/00031305.2017.1375989) |
 | 15   | *Spring vacation*                | ---           |
 | 16   | [Data analysis workflows](tutorials/workflows.qmd)          | [{{< fa book >}} Computational Reproducibility in Archaeological Research: Basic Principles and a Case Study of Their Implementation](https://doi.org/10.1007/s10816-015-9272-9)           |
-| 17   | Replication Workshop I           | ---           |
-| 18   | Replication Workshop II          | ---           |
+| 17   | [Replication Workshop I](tutorials/replication.qmd)           | [{{< fa book >}} When the World’s Population Took Off](https://doi.org/10.1126/science.1208880)<br />[{{< fa book >}} One paper to be replicated](tutorials/replication.qmd#prerequisites)            |
+| 18   | [Replication Workshop II](tutorials/replication.qmd)          | ---           |
 |      | **Modelling archaeological data**                |
 | 19   | Hypothesis testing               | ---           |
 | 20   | Regression                       | ---           |

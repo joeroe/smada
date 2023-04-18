@@ -37,7 +37,7 @@ website:
           contents:
             - tutorials/tidy_data.qmd
             - tutorials/workflows.qmd
-            - tutorials/.replication.qmd
+            - tutorials/replication.qmd
         - section: "Modelling archaeological data"
           contents:
             - tutorials/.testing.qmd

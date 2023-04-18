@@ -1,0 +1,44 @@
+---
+title: "Replication Workshop"
+---
+
+The purpose of the 'replication workshop' is to apply the statistics and R skills you have learned so far to replicating a published finding.
+
+## Objectives
+
+The replication workshop should enable you to:
+
+* Identify the key findings of a piece of published research in archaeostatistics
+* Describe the data and methods the original authors use to support their findings
+* Determine whether the findings are reproducible and/or replicable
+
+## Prerequisites
+
+* Bocquet-Appel (2011), [When the World’s Population Took Off: The Springboard of the Neolithic Demographic Transition](https://doi.org/10.1126/science.1208880), *Science* 333(6042).
+* One of:
+  * Bocquet-Appel (2002), [Paleoanthropological Traces of a Neolithic Demographic Transition](https://doi.org/10.1086/342429), *Current Anthropology* 43(4): 637–650.
+  * Downey et al. (2014), [The Neolithic Demographic Transition in Europe: Correlation with Juvenility Index Supports Interpretation of the Summed Calibrated Radiocarbon Date Probability Distribution (SCDPD) as a Valid Demographic Proxy](https://doi.org/10.1371/journal.pone.0105730), *PLOS ONE*: e105730.
+  * Kohler & Reese (2014), [Long and spatially variable Neolithic Demographic Transition in the North American Southwest](https://doi.org/10.1073/pnas.1404367111), *Proceedings of the National Academy of Sciences* 111(28): 10101–10106.
+
+## Reproducibility and replicability
+
+<mark>Reproducibility</mark> and <mark>replicability</mark> are often used interchangeably.
+Rougly speaking, they ask, given a published research finding, can someone else use the same methods and data to get the same result?
+The answer to that question is "
+According to the journal [*Rescience C*](http://rescience.github.io/faq/#whats-the-difference-between-replication-and-reproduction):
+
+> **Reproduction** of a computational study means running the same computation on the same input data, and then checking if the results are the same, or at least "close enough" when it comes to numerical approximations. Reproduction can be considered as software testing at the level of a complete study.
+>
+> **Replication** of a scientific study (computational or other) means repeating a published protocol, respecting its spirit and intentions but varying the technical details. For computational work, this would mean using different software, running a simulation from different initial conditions, etc. The idea is to change something that everyone believes shouldn't matter, and see if the scientific conclusions are affected or not.
+>
+> Reproduction verifies that a computation was recorded with enough detail that it can be analyzed later or by someone else. Replication explores which details matter for reaching a specific scientific conclusion. A replication attempt is most useful if reproducibility has already been verified. Otherwise, if replication fails, leads to different conclusions, you cannot trace back the differences in the results to the underlying code and data.
+
+## Exercise
+
+In groups, take one of the papers above and:
+
+1. Identify at least one key finding of the paper to replicate (e.g. a specific figure)
+2. Identify the a) data, b) data manipulation and c) analyses the authors use to support the finding
+3. <mark>Reproduce</mark> the finding by repeating the analysis with the original data, as closely as possible
+4. Identify at one or more 'technical details' that could (but hopefully don't!) affect the result
+5. <mark>Replicate</mark> the finding by repeating the analysis with alterations to these data
