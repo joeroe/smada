@@ -17,7 +17,7 @@ title: "Schedule"
 | 17   | [Replication Workshop I](tutorials/replication.qmd)           | [{{< fa book >}} When the World’s Population Took Off](https://doi.org/10.1126/science.1208880)<br />[{{< fa book >}} One paper to be replicated](tutorials/replication.qmd#prerequisites)            |
 | 18   | [Replication Workshop II](tutorials/replication.qmd)          | ---           |
 |      | **Modelling archaeological data**                |
-| 19   | Hypothesis testing               | {{< fa book >}} *Quantifying Archaeology*, [ch. 5](https://doi.org/10.1515/9781474472555-006) & [ch. 6](https://doi.org/10.1515/9781474472555-007)           |
+| 19   | [Hypothesis testing](tutorials/testing.qmd)               | {{< fa book >}} *Quantifying Archaeology*, [ch. 5](https://doi.org/10.1515/9781474472555-006) & [ch. 6](https://doi.org/10.1515/9781474472555-007)           |
 | 20   | Regression                       | ---           |
 | 21*  | Multivariate analysis            | ---           |
 | 22   | Review & course evaluation       | ---           |
