@@ -1,0 +1,51 @@
+---
+title: "Hypothesis testing"
+---
+
+This tutorial introduces the most common methods in the <mark>null-hypothesis significance testing</mark> (NHST) framework, a highly influential <mark>frequentist</mark> approach to statistics developed in the 20th century.
+The basic idea of this approach is to use probability theory to test whether an observed pattern can be considered <mark>statistically significant</mark>.
+More formally, it tries to quantify how confident we can be about rejecting the <mark>null hypothesis</mark> - that any pattern or relationship we think we see is just down to chance.
+In practice, this amounts to choosing a <mark>test statistic</mark> that is appropriate to the <mark>sample</mark> you have available and comparing it to a reference distribution to calculate the probability of observing that statistic under the null hypothesis (the '<mark>p-value</mark>').
+
+## Prerequisites
+
+* Chapter 5 ("An Introduction to Statistical Inference"), in Stephen Shennan (1998), *Quantifying Archaeology*, 2nd edition. <https://doi.org/10.1515/9781474472555-005>
+
+## Objectives
+
+This tutorial should enable you to:
+
+* Understand the key concepts behind the NHST framework
+* Recognise a normal distribution and know how to deal with non-normal data
+* Select an appropriate statistic to test for significant differences in a) numeric and b) categorical distributions and compute it in R
+* Interpret the result of an NHST test
+* 'Tidy' the results of an NHST test and work with tests of multiple subsets of a dataset
+
+<!--
+
+## Is my data normal?
+
+* Kolmogorov-Smirnov
+* Shapiro-Wilks (better for small sample size)
+* Log-transforming
+
+## Testing the difference between numeric distributions
+
+* Z-scores ?
+* Student's t
+  * F test
+* Nonparametric: Mann-Whitney U
+* Binomial
+
+## Testing the difference between categorical distributions
+
+* Chi-squared
+* Fisher's exact?
+
+## Interpretation and 'tests as data'
+
+* broom
+* Group and test
+* Chi-squared residuals
+
+-->

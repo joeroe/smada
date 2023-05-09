@@ -40,7 +40,7 @@ website:
             - tutorials/replication.qmd
         - section: "Modelling archaeological data"
           contents:
-            - tutorials/.testing.qmd
+            - tutorials/testing.qmd
             - tutorials/.regression.qmd
             - tutorials/.multivariate.qmd
         - tutorials/.review.qmd
