@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Methods for Archaeological Data Analysis [FS2023] - Hypothesis testing</title>
+<title>SMADA - Hypothesis testing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,8 +17,42 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tutorials/regression.html" rel="next">
+<link href="../tutorials/.regression.qmd" rel="next">
 <link href="../tutorials/replication.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -73,213 +107,222 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Statistical Methods for Archaeological Data Analysis [FS2023]</span>
+    <span class="navbar-title">SMADA</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../info.html">
+    <a class="nav-link" href="../info.html" rel="" target="">
  <span class="menu-text">Information</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../schedule.html">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Tutorials</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../tutorials/introduction.html">
+    <a class="dropdown-item" href="../tutorials/introduction.html" rel="" target="">
  <span class="dropdown-text">Introduction</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Exploring archaeological data</li>
         <li>
-    <a class="dropdown-item" href="../tutorials/eda_with_r.html">
+    <a class="dropdown-item" href="../tutorials/eda_with_r.html" rel="" target="">
  <span class="dropdown-text">Exploring data with R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/visualising_distributions.html">
+    <a class="dropdown-item" href="../tutorials/visualising_distributions.html" rel="" target="">
  <span class="dropdown-text">Visualising distributions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/visualising_relationships.html">
+    <a class="dropdown-item" href="../tutorials/visualising_relationships.html" rel="" target="">
  <span class="dropdown-text">Visualising relationships</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/summary_statistics.html">
+    <a class="dropdown-item" href="../tutorials/summary_statistics.html" rel="" target="">
  <span class="dropdown-text">Summary statistics</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Working with archaeological data</li>
         <li>
-    <a class="dropdown-item" href="../tutorials/tidy_data.html">
+    <a class="dropdown-item" href="../tutorials/tidy_data.html" rel="" target="">
  <span class="dropdown-text">Importing and tidying data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/workflows.html">
+    <a class="dropdown-item" href="../tutorials/workflows.html" rel="" target="">
  <span class="dropdown-text">Data analysis workflows</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/replication.html">
+    <a class="dropdown-item" href="../tutorials/replication.html" rel="" target="">
  <span class="dropdown-text">Replication Workshop</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Modelling archaeological data</li>
         <li>
-    <a class="dropdown-item" href="../tutorials/testing.html">
+    <a class="dropdown-item" href="../tutorials/testing.html" rel="" target="">
  <span class="dropdown-text">Hypothesis testing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/regression.html">
- <span class="dropdown-text">Introduction</span></a>
+    <a class="dropdown-item" href="../tutorials/.regression.qmd" rel="" target="">
+ <span class="dropdown-text"></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/multivariate.html">
- <span class="dropdown-text">Introduction</span></a>
+    <a class="dropdown-item" href="../tutorials/.multivariate.qmd" rel="" target="">
+ <span class="dropdown-text"></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/.review.qmd" rel="" target="">
+ <span class="dropdown-text"></span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../assessment.html">
- <span class="menu-text">Assessment</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../bibliography.html">
+    <a class="nav-link" href="../bibliography.html" rel="" target="">
  <span class="menu-text">Bibliography</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Hypothesis testing</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/testing.html">Modelling archaeological data</a></li><li class="breadcrumb-item"><a href="../tutorials/testing.html">Hypothesis testing</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/introduction.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../tutorials/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Exploring archaeological data</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Exploring archaeological data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/eda_with_r.html" class="sidebar-item-text sidebar-link">Exploring data with R</a>
+  <a href="../tutorials/eda_with_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exploring data with R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/visualising_distributions.html" class="sidebar-item-text sidebar-link">Visualising distributions</a>
+  <a href="../tutorials/visualising_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visualising distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/visualising_relationships.html" class="sidebar-item-text sidebar-link">Visualising relationships</a>
+  <a href="../tutorials/visualising_relationships.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visualising relationships</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/summary_statistics.html" class="sidebar-item-text sidebar-link">Summary statistics</a>
+  <a href="../tutorials/summary_statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Working with archaeological data</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Working with archaeological data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tidy_data.html" class="sidebar-item-text sidebar-link">Importing and tidying data</a>
+  <a href="../tutorials/tidy_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Importing and tidying data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/workflows.html" class="sidebar-item-text sidebar-link">Data analysis workflows</a>
+  <a href="../tutorials/workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data analysis workflows</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/replication.html" class="sidebar-item-text sidebar-link">Replication Workshop</a>
+  <a href="../tutorials/replication.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication Workshop</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Modelling archaeological data</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Modelling archaeological data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/testing.html" class="sidebar-item-text sidebar-link active">Hypothesis testing</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/regression.html" class="sidebar-item-text sidebar-link">Introduction</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/multivariate.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../tutorials/testing.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hypothesis testing</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  review.qmd
-  </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key concepts</a></li>
-  <li><a href="#foundation" id="toc-foundation" class="nav-link" data-scroll-target="#foundation">Foundation</a></li>
-  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#is-my-data-normal" id="toc-is-my-data-normal" class="nav-link" data-scroll-target="#is-my-data-normal">Is my data normal?</a>
+  <ul class="collapse">
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  </ul></li>
+  <li><a href="#testing-the-difference-between-numeric-distributions" id="toc-testing-the-difference-between-numeric-distributions" class="nav-link" data-scroll-target="#testing-the-difference-between-numeric-distributions">Testing the difference between numeric distributions</a>
+  <ul class="collapse">
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1">Exercises</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/smada/blob/main/tutorials/testing.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/smada/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -288,7 +331,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Hypothesis testing</h1>
+<h1 class="title">Hypothesis testing</h1>
 </div>
 
 
@@ -303,23 +346,129 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In this tutorial we will look at <em>frequentist</em> statistics, which primarily concerns ‘testing’ various types of hypotheses using probability theory.</p>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-</section>
+<p>This tutorial introduces the most common methods in the <mark>null-hypothesis significance testing</mark> (NHST) framework, a highly influential <mark>frequentist</mark> approach to statistics developed in the 20th century. The basic idea of this approach is to use probability theory to test whether an observed pattern can be considered <mark>statistically significant</mark>. More formally, it tries to quantify how confident we can be about rejecting the <mark>null hypothesis</mark> - that any pattern or relationship we think we see is just down to chance. In practice, this amounts to choosing a <mark>test statistic</mark> that is appropriate to the <mark>sample</mark> you have available and comparing it to a reference distribution to calculate the probability of observing that statistic under the null hypothesis (the ‘<mark>p-value</mark>’).</p>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Chapter 5 (“An Introduction to Statistical Inference”), in Stephen Shennan (1998), <em>Quantifying Archaeology</em>, 2nd edition. <a href="https://doi.org/10.1515/9781474472555-005" class="uri">https://doi.org/10.1515/9781474472555-005</a></li>
+</ul>
 </section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key concepts</h2>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>This tutorial should enable you to:</p>
+<ul>
+<li>Understand the key concepts behind the NHST framework</li>
+<li>Recognise a normal distribution and know how to deal with non-normal data</li>
+<li>Select an appropriate statistic to test for significant differences in a) numeric and b) categorical distributions and compute it in R</li>
+</ul>
 </section>
-<section id="foundation" class="level2">
-<h2 class="anchored" data-anchor-id="foundation">Foundation</h2>
+<section id="is-my-data-normal" class="level2">
+<h2 class="anchored" data-anchor-id="is-my-data-normal">Is my data normal?</h2>
+<p>Most NHST tests are <mark>parametric</mark>, meaning that they make assumptions about the way the data was collected. These assumptions essentially describe data collected in randomised experiments (which, not surprisingly, is where NHST originated): that we have a <mark>sample</mark> of the <mark>population</mark> we’re interested in; that this sample was drawn randomly, each observation <mark>independent</mark> of the others; and that the resulting variable has a <mark>normal distribution</mark>. The first two assumptions are out of our control as data analysts but the third—the <mark>normality assumption</mark>—is something we can investigate and, possibly, correct.</p>
+<p>How can we tell if data is normally distributed? The most obvious way, which is frequently all you need, is to inspect it graphically using the techniques we learned for <a href="../tutorials/visualising_distributions.html">visualising distributions</a>. Plotting the distribution of bill length of Adelie penguins from the <code>palmerpenguins</code> dataset, for example: <!-- TODO: replace with an islay dataset --></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr, <span class="at">warn.conflicts =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>adelie <span class="ot">&lt;-</span> <span class="fu">filter</span>(penguins, species <span class="sc">==</span> <span class="st">"Adelie"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(adelie, <span class="fu">aes</span>(bill_length_mm)) <span class="sc">+</span> <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<!-- TODO: QQ plots -->
+<p>We can see that the distribution definitely looks normal. If we wanted to be <em>really</em> sure (or convince someone else!) that it was normal enough to work with in NHST, we can use the <mark>Shapiro-Wilk test of normality</mark>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(adelie<span class="sc">$</span>bill_length_mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This reports the <mark>test statistic</mark> (W) and an associated <mark>p-value</mark>. The <mark>null hypothesis</mark> of the Shapiro-Wilk test is that the variable is normally distributed; here we see a high p-value, meaning that we cannot be confident about rejecting this null hypothesis. In other words, it indicates that the distribution is probably <em>drawn from a normal distribution</em>.</p>
+<p>Unfortunately, as <a href="../tutorials/summary_statistics.html">we have already found out</a>, it is quite common to see markedly not-normal distributions in archaeological data. Take the number of lithics found at sites on Islay, for example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(islay)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(total_chipped_stone)) <span class="sc">+</span> <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In case we weren’t already certain, Shapiro-Wilk tells us we can very confidently reject the null hypothesis of normality:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(islay_sites<span class="sc">$</span>total_chipped_stone)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Given a non-normal distribution like this, we have two options. The first is to use one of a number of <mark>nonparametric tests</mark>—NHST techniques that do not make assumptions about the distribution of the data—which we will look at shortly.</p>
+<p>Or, we can try to <em>make</em> the data normal. This option is particularly attractive here because the distribution of chipped stone counts resembles a <mark>log-normal distribution</mark>, which can easily be transformed into a normal distribution by taking its logarithm:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>islay_sites <span class="ot">&lt;-</span> <span class="fu">mutate</span>(islay_sites, <span class="at">log_chipped_stone =</span> <span class="fu">log</span>(total_chipped_stone))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(islay_sites, <span class="fu">aes</span>(log_chipped_stone)) <span class="sc">+</span> <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(islay_sites<span class="sc">$</span>log_chipped_stone)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Thus we could precede with parametric NHST using <code>log_chipped_stone</code> instead of <code>total_chipped_stone</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+A question of power
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You might wonder, if parametric tests are so fussy about what kind of data they’ll accept, but nonparametric tests will take anything, why don’t we just always use nonparametric ones? One reason for this is historical: parametric tests make the assumptions to do because they make it <em>much</em> easier to calculation the test statistic and its p-value. In the pre-computer era, ease of calculation was extremely important, and this parametric testing became the norm. Another reason—now more relevant—is that these assumptions tend to give parametric more <mark>statistical power</mark>: they’re better at detecting small but significant effects, while avoiding false positives.</p>
+</div>
+</div>
+<section id="exercises" class="level3">
+<h3 class="anchored" data-anchor-id="exercises">Exercises</h3>
+<ol type="1">
+<li>Is the <em>body mass</em> of Adelie penguins normally distributed?</li>
+<li><code>islay_land</code> contains the area of Islay itself and the islets around it. Describe its distribution.</li>
+<li>Transform <code>area</code> such that it could be used in a nonparametric test.</li>
+</ol>
 </section>
-<section id="extensions" class="level2">
-<h2 class="anchored" data-anchor-id="extensions">Extensions</h2>
+</section>
+<section id="testing-the-difference-between-numeric-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="testing-the-difference-between-numeric-distributions">Testing the difference between numeric distributions</h2>
+<p>Having established whether our data is normal (or not), we can move on to testing hypotheses about it. A very common class of question is whether there is a <mark>statistically significant difference</mark> between two samples. Or, put another way, whether two sample were drawn from the same population. You can reduce a lot of types of archaeological questions to this type of hypothesis:</p>
+<ul>
+<li>Are two groups of artefact different enough to be called “types”?</li>
+<li>Do sites in different periods or contexts differ in a certain characteristic?</li>
+<li>Reversing the question, is an assemblage from one site likely to be from the same ‘population’ as an assemblage in another?</li>
+</ul>
+<p>We’ll look at whether the number of chipped stone artefacts differs between Mesolithic and Later Prehistoric sites. We can start, as always, by inspecting the data graphically:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(islay_sites, period <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Mesolithic"</span>, <span class="st">"Later Prehistoric"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(total_chipped_stone)) <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">facet_wrap</span>(<span class="sc">~</span>period, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span> </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>They look a little different, but it’s hard to know if this is just because of unequal sampling. This is where NHST can be handy.</p>
+<p><mark>Student’s t test</mark> is a parametric test for the equality of the means of two distributions. If we inspect the documentation for its R function, <code>?t.test</code>, we can see that we need to tell it whether the <mark>variance</mark> of the distributions is equal or not. To decide this, we can turn to another test, the <mark>F test</mark> for equal variance:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mesolithic <span class="ot">&lt;-</span> <span class="fu">filter</span>(islay_sites, period <span class="sc">==</span> <span class="st">"Mesolithic"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>later <span class="ot">&lt;-</span> <span class="fu">filter</span>(islay_sites, period <span class="sc">==</span> <span class="st">"Later Prehistoric"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">var.test</span>(mesolithic<span class="sc">$</span>log_chipped_stone, later<span class="sc">$</span>log_chipped_stone)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Remember, we’ve found that the <em>total</em> chipped stone is not normally distributed, so to do these parametric tests we use <code>log_chipped_stone</code> instead. This tells us that the variances are probably equal, so we can precede with the t test using <code>var.equal = FALSE</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(mesolithic<span class="sc">$</span>log_chipped_stone, later<span class="sc">$</span>log_chipped_stone)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Though the p value is quite small, it is above <code>0.05</code>, so cannot safely reject the null hypothesis. * Nonparametric: Mann-Whitney U * Nonparametric: Kolmogorov-Smirnov</p>
+<section id="exercises-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercises-1">Exercises</h3>
+<ol type="1">
+<li>Is there a significant difference between the number of chipped stones at Mesolithic and Later Prehistoric sites on Islay?</li>
+<li>Give a <mark>null hypothesis</mark> and <mark>alternative hypothesis</mark> that could help answer the following archaeological questions:
+<ul>
+<li>A zooarchaeologist has measured the length of deer long bones at a hunter-gatherer site and an early farming site in the same region. She theorises that the two sites were hunting from different deer populations. Is this likely?</li>
+<li>You have a newly-discovered site from which an assemblage of bronze arrowheads have been excavated. You also have a set of measurements of similar arrowheads from a Bronze Age culture in an adjacent region. Based on the arrowheads, does your new site belong to this culture?</li>
+<li>Were Neolithic people shorter than Mesolithic people?</li>
+</ul></li>
+<li>Two non-parametric versions of the t-test are the <mark>Kolmogorov-Smirnov test</mark> and the <mark>Mann-Whitney U test</mark>. Perform each in R using the (untransformed) number of chipped stones from sites on Islay. Do the results differ from the t test above?</li>
+</ol>
+<!-- TODO
+## Testing the difference between categorical distributions
+
+* Chi-squared
+* Fisher's exact?
+-->
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -350,9 +499,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -417,6 +580,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -463,8 +712,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tutorials/regression.html" class="pagination-link">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../tutorials/.regression.qmd" class="pagination-link">
+        <span class="nav-page-text"></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
