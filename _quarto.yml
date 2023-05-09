@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Statistical Methods for Archaeological Data Analysis [FS2023]"
+  title: "SMADA"
 
   page-navigation: true
   repo-url: "https://github.com/joeroe/smada"
