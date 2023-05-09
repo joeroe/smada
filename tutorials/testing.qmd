@@ -1,5 +1,7 @@
 ---
 title: "Hypothesis testing"
+execute:
+  output: false
 ---
 
 This tutorial introduces the most common methods in the <mark>null-hypothesis significance testing</mark> (NHST) framework, a highly influential <mark>frequentist</mark> approach to statistics developed in the 20th century.
@@ -18,34 +20,140 @@ This tutorial should enable you to:
 * Understand the key concepts behind the NHST framework
 * Recognise a normal distribution and know how to deal with non-normal data
 * Select an appropriate statistic to test for significant differences in a) numeric and b) categorical distributions and compute it in R
-* Interpret the result of an NHST test
-* 'Tidy' the results of an NHST test and work with tests of multiple subsets of a dataset
-
-<!--
 
 ## Is my data normal?
 
-* Kolmogorov-Smirnov
-* Shapiro-Wilks (better for small sample size)
-* Log-transforming
+Most NHST tests are <mark>parametric</mark>, meaning that they make assumptions about the way the data was collected.
+These assumptions essentially describe data collected in randomised experiments (which, not surprisingly, is where NHST originated): that we have a <mark>sample</mark> of the <mark>population</mark> we're interested in; that this sample was drawn randomly, each observation <mark>independent</mark> of the others; and that the resulting variable has a <mark>normal distribution</mark>.
+The first two assumptions are out of our control as data analysts but the third—the <mark>normality assumption</mark>—is something we can investigate and, possibly, correct.
+
+How can we tell if data is normally distributed?
+The most obvious way, which is frequently all you need, is to inspect it graphically using the techniques we learned for [visualising distributions](visualising_distributions.qmd).
+Plotting the distribution of bill length of Adelie penguins from the `palmerpenguins` dataset, for example: <!-- TODO: replace with an islay dataset -->
+
+```{r, warning=FALSE}
+library(ggplot2)
+library(dplyr, warn.conflicts = FALSE)
+library(palmerpenguins)
+
+adelie <- filter(penguins, species == "Adelie")
+ggplot(adelie, aes(bill_length_mm)) + geom_density()
+```
+
+<!-- TODO: QQ plots -->
+
+We can see that the distribution definitely looks normal.
+If we wanted to be *really* sure (or convince someone else!) that it was normal enough to work with in NHST, we can use the <mark>Shapiro-Wilk test of normality</mark>:
+
+```{r}
+shapiro.test(adelie$bill_length_mm)
+```
+
+This reports the <mark>test statistic</mark> (W) and an associated <mark>p-value</mark>.
+The <mark>null hypothesis</mark> of the Shapiro-Wilk test is that the variable is normally distributed; here we see a high p-value, meaning that we cannot be confident about rejecting this null hypothesis.
+In other words, it indicates that the distribution is probably *drawn from a normal distribution*.
+
+Unfortunately, as [we have already found out](summary_statistics.qmd), it is quite common to see markedly not-normal distributions in archaeological data.
+Take the number of lithics found at sites on Islay, for example:
+
+```{r, warning=FALSE}
+library(islay)
+
+ggplot(islay_sites, aes(total_chipped_stone)) + geom_density()
+```
+
+In case we weren't already certain, Shapiro-Wilk tells us we can very confidently reject the null hypothesis of normality:
+
+```{r}
+shapiro.test(islay_sites$total_chipped_stone)
+```
+
+Given a non-normal distribution like this, we have two options.
+The first is to use one of a number of <mark>nonparametric tests</mark>—NHST techniques that do not make assumptions about the distribution of the data—which we will look at shortly.
+
+Or, we can try to *make* the data normal.
+This option is particularly attractive here because the distribution of chipped stone counts resembles a <mark>log-normal distribution</mark>, which can easily be transformed into a normal distribution by taking its logarithm:
+
+```{r}
+islay_sites <- mutate(islay_sites, log_chipped_stone = log(total_chipped_stone))
+
+ggplot(islay_sites, aes(log_chipped_stone)) + geom_density()
+shapiro.test(islay_sites$log_chipped_stone)
+```
+
+Thus we could precede with parametric NHST using `log_chipped_stone` instead of `total_chipped_stone`.
+
+::: {.callout-tip}
+### A question of power
+You might wonder, if parametric tests are so fussy about what kind of data they'll accept, but nonparametric tests will take anything, why don't we just always use nonparametric ones?
+One reason for this is historical: parametric tests make the assumptions to do because they make it *much* easier to calculation the test statistic and its p-value.
+In the pre-computer era, ease of calculation was extremely important, and this parametric testing became the norm.
+Another reason—now more relevant—is that these assumptions tend to give parametric more <mark>statistical power</mark>: they're better at detecting small but significant effects, while avoiding false positives.
+:::
+
+### Exercises
+
+1. Is the *body mass* of Adelie penguins normally distributed?
+2. `islay_land` contains the area of Islay itself and the islets around it. Describe its distribution.
+3. Transform `area` such that it could be used in a nonparametric test.
 
 ## Testing the difference between numeric distributions
 
-* Z-scores ?
-* Student's t
-  * F test
-* Nonparametric: Mann-Whitney U
-* Binomial
+Having established whether our data is normal (or not), we can move on to testing hypotheses about it.
+A very common class of question is whether there is a <mark>statistically significant difference</mark> between two samples.
+Or, put another way, whether two sample were drawn from the same population.
+You can reduce a lot of types of archaeological questions to this type of hypothesis:
 
+* Are two groups of artefact different enough to be called "types"?
+* Do sites in different periods or contexts differ in a certain characteristic?
+* Reversing the question, is an assemblage from one site likely to be from the same 'population' as an assemblage in another?
+
+We'll look at whether the number of chipped stone artefacts differs between Mesolithic and Later Prehistoric sites.
+We can start, as always, by inspecting the data graphically:
+
+```{r, warning=FALSE}
+filter(islay_sites, period %in% c("Mesolithic", "Later Prehistoric")) |>
+	ggplot(aes(total_chipped_stone)) + 
+		facet_wrap(~period, ncol = 1, scales = "free_y") + 
+		geom_density()
+```
+
+They look a little different, but it's hard to know if this is just because of unequal sampling.
+This is where NHST can be handy.
+
+<mark>Student's t test</mark> is a parametric test for the equality of the means of two distributions.
+If we inspect the documentation for its R function, `?t.test`, we can see that we need to tell it whether the <mark>variance</mark> of the distributions is equal or not.
+To decide this, we can turn to another test, the <mark>F test</mark> for equal variance:
+
+```{r}
+mesolithic <- filter(islay_sites, period == "Mesolithic")
+later <- filter(islay_sites, period == "Later Prehistoric")
+var.test(mesolithic$log_chipped_stone, later$log_chipped_stone)
+```
+
+Remember, we've found that the *total* chipped stone is not normally distributed, so to do these parametric tests we use `log_chipped_stone` instead.
+This tells us that the variances are probably equal, so we can precede with the t test using `var.equal = FALSE`:
+
+```{r}
+t.test(mesolithic$log_chipped_stone, later$log_chipped_stone)
+```
+
+Though the p value is quite small, it is above `0.05`, so cannot safely reject the null hypothesis.
+* Nonparametric: Mann-Whitney U
+* Nonparametric: Kolmogorov-Smirnov
+
+### Exercises
+
+1. Is there a significant difference between the number of chipped stones at Mesolithic and Later Prehistoric sites on Islay?
+2. Give a <mark>null hypothesis</mark> and <mark>alternative hypothesis</mark> that could help answer the following archaeological questions:
+   * A zooarchaeologist has measured the length of deer long bones at a hunter-gatherer site and an early farming site in the same region. She theorises that the two sites were hunting from different deer populations. Is this likely?
+   * You have a newly-discovered site from which an assemblage of bronze arrowheads have been excavated. You also have a set of measurements of similar arrowheads from a Bronze Age culture in an adjacent region. Based on the arrowheads, does your new site belong to this culture?
+   * Were Neolithic people shorter than Mesolithic people?
+3. Two non-parametric versions of the t-test are the <mark>Kolmogorov-Smirnov test</mark> and the <mark>Mann-Whitney U test</mark>. Perform each in R using the (untransformed) number of chipped stones from sites on Islay. Do the results differ from the t test above?
+
+<!-- TODO
 ## Testing the difference between categorical distributions
 
 * Chi-squared
 * Fisher's exact?
-
-## Interpretation and 'tests as data'
-
-* broom
-* Group and test
-* Chi-squared residuals
-
 -->
