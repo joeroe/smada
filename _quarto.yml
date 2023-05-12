@@ -50,6 +50,6 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-
+    include-in-header:
+      text: |
+        <script async src="https://umami.joeroe.io/script.js" data-website-id="d5755f67-004e-415f-8855-425405fdd537"></script>
