@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SMADA - Replication Workshop</title>
+<title>Statistical Methods for Archaeological Data Analysis [FS2023] - Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tutorials/testing.html" rel="next">
-<link href="../tutorials/workflows.html" rel="prev">
+<link href="../tutorials/testing.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,7 +59,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script async="" src="https://umami.joeroe.io/script.js" data-website-id="d5755f67-004e-415f-8855-425405fdd537"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -74,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">SMADA</span>
+    <span class="navbar-title">Statistical Methods for Archaeological Data Analysis [FS2023]</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -142,19 +140,15 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Hypothesis testing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/.regression.qmd">
- <span class="dropdown-text"></span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../tutorials/.multivariate.qmd">
- <span class="dropdown-text"></span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../tutorials/.review.qmd">
- <span class="dropdown-text"></span></a>
+    <a class="dropdown-item" href="../tutorials/regression.html">
+ <span class="dropdown-text">Regression</span></a>
   </li>  
     </ul>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../assessment.html">
+ <span class="menu-text">Assessment</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../bibliography.html">
  <span class="menu-text">Bibliography</span></a>
@@ -166,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Replication Workshop</h1>
+      <h1 class="quarto-secondary-nav-title">Regression</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -234,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/replication.html" class="sidebar-item-text sidebar-link active">Replication Workshop</a>
+  <a href="../tutorials/replication.html" class="sidebar-item-text sidebar-link">Replication Workshop</a>
   </div>
 </li>
       </ul>
@@ -252,7 +246,18 @@ ul.task-list li input[type="checkbox"] {
   <a href="../tutorials/testing.html" class="sidebar-item-text sidebar-link">Hypothesis testing</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/regression.html" class="sidebar-item-text sidebar-link active">Regression</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  tutorials/multivariate.qmd
+  </li>
       </ul>
+  </li>
+        <li class="sidebar-item">
+  tutorials/review.qmd
   </li>
     </ul>
     </div>
@@ -265,17 +270,18 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#reproducibility-and-replicability" id="toc-reproducibility-and-replicability" class="nav-link" data-scroll-target="#reproducibility-and-replicability">Reproducibility and replicability</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key concepts</a></li>
+  <li><a href="#foundation" id="toc-foundation" class="nav-link" data-scroll-target="#foundation">Foundation</a></li>
+  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/smada/blob/main/tutorials/replication.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/smada/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/smada/blob/main/tutorials/regression.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/smada/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Replication Workshop</h1>
+<h1 class="title d-none d-lg-block">Regression</h1>
 </div>
 
 
@@ -290,47 +296,21 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The purpose of the ‘replication workshop’ is to apply the statistics and R skills you have learned so far to replicating a published finding.</p>
+<p>In this tutorial we will look at regression, an extremely versatile family of methods for modelling the relationship (correlation) between variables.</p>
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<p>The replication workshop should enable you to:</p>
-<ul>
-<li>Identify the key findings of a piece of published research in archaeostatistics</li>
-<li>Describe the data and methods the original authors use to support their findings</li>
-<li>Determine whether the findings are reproducible and/or replicable</li>
-</ul>
 </section>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Bocquet-Appel (2011), <a href="https://doi.org/10.1126/science.1208880">When the World’s Population Took Off: The Springboard of the Neolithic Demographic Transition</a>, <em>Science</em> 333(6042).</li>
-<li>One of:
-<ul>
-<li>Bocquet-Appel (2002), <a href="https://doi.org/10.1086/342429">Paleoanthropological Traces of a Neolithic Demographic Transition</a>, <em>Current Anthropology</em> 43(4): 637–650.</li>
-<li>Downey et al.&nbsp;(2014), <a href="https://doi.org/10.1371/journal.pone.0105730">The Neolithic Demographic Transition in Europe: Correlation with Juvenility Index Supports Interpretation of the Summed Calibrated Radiocarbon Date Probability Distribution (SCDPD) as a Valid Demographic Proxy</a>, <em>PLOS ONE</em>: e105730.</li>
-<li>Kohler &amp; Reese (2014), <a href="https://doi.org/10.1073/pnas.1404367111">Long and spatially variable Neolithic Demographic Transition in the North American Southwest</a>, <em>Proceedings of the National Academy of Sciences</em> 111(28): 10101–10106.</li>
-</ul></li>
-</ul>
 </section>
-<section id="reproducibility-and-replicability" class="level2">
-<h2 class="anchored" data-anchor-id="reproducibility-and-replicability">Reproducibility and replicability</h2>
-<p><mark>Reproducibility</mark> and <mark>replicability</mark> are often used interchangeably. Rougly speaking, they ask, given a published research finding, can someone else use the same methods and data to get the same result? The answer to that question is ” According to the journal <a href="http://rescience.github.io/faq/#whats-the-difference-between-replication-and-reproduction"><em>Rescience C</em></a>:</p>
-<blockquote class="blockquote">
-<p><strong>Reproduction</strong> of a computational study means running the same computation on the same input data, and then checking if the results are the same, or at least “close enough” when it comes to numerical approximations. Reproduction can be considered as software testing at the level of a complete study.</p>
-<p><strong>Replication</strong> of a scientific study (computational or other) means repeating a published protocol, respecting its spirit and intentions but varying the technical details. For computational work, this would mean using different software, running a simulation from different initial conditions, etc. The idea is to change something that everyone believes shouldn’t matter, and see if the scientific conclusions are affected or not.</p>
-<p>Reproduction verifies that a computation was recorded with enough detail that it can be analyzed later or by someone else. Replication explores which details matter for reaching a specific scientific conclusion. A replication attempt is most useful if reproducibility has already been verified. Otherwise, if replication fails, leads to different conclusions, you cannot trace back the differences in the results to the underlying code and data.</p>
-</blockquote>
+<section id="key-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts">Key concepts</h2>
 </section>
-<section id="exercise" class="level2">
-<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<p>In groups, take one of the papers above and:</p>
-<ol type="1">
-<li>Identify at least one key finding of the paper to replicate (e.g.&nbsp;a specific figure)</li>
-<li>Identify the a) data, b) data manipulation and c) analyses the authors use to support the finding</li>
-<li><mark>Reproduce</mark> the finding by repeating the analysis with the original data, as closely as possible</li>
-<li>Identify at one or more ‘technical details’ that could (but hopefully don’t!) affect the result</li>
-<li><mark>Replicate</mark> the finding by repeating the analysis with alterations to these data</li>
-</ol>
+<section id="foundation" class="level2">
+<h2 class="anchored" data-anchor-id="foundation">Foundation</h2>
+</section>
+<section id="extensions" class="level2">
+<h2 class="anchored" data-anchor-id="extensions">Extensions</h2>
 
 
 </section>
@@ -471,14 +451,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../tutorials/workflows.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data analysis workflows</span>
+      <a href="../tutorials/testing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hypothesis testing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tutorials/testing.html" class="pagination-link">
-        <span class="nav-page-text">Hypothesis testing</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
