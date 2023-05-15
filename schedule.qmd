@@ -18,8 +18,8 @@ title: "Schedule"
 | 18   | [Replication Workshop II](tutorials/replication.qmd)          | ---           |
 |      | **Modelling archaeological data**                |
 | 19   | [Hypothesis testing](tutorials/testing.qmd)               | {{< fa book >}} *Quantifying Archaeology*, [ch. 5](https://doi.org/10.1515/9781474472555-006) & [ch. 6](https://doi.org/10.1515/9781474472555-007)           |
-| 20   | Regression                       | {{< fa book >}} *Quantifying Archaeology*, [ch. 8](https://doi.org/10.1515/9781474472555-009) & [ch. 9](https://doi.org/10.1515/9781474472555-010)           |
-| 21*  | Multivariate analysis            | ---           |
-| 22   | Review & course evaluation       | ---           |
+| 20    | ---                            | --- |
+| 21*   | Regression                       | {{< fa book >}} *Quantifying Archaeology*, [ch. 8](https://doi.org/10.1515/9781474472555-009) & [ch. 9](https://doi.org/10.1515/9781474472555-010)           |
+| 22  | Multivariate analysis            | ---           |
 
 \* Substitute instructor
