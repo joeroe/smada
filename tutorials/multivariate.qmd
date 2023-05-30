@@ -2,14 +2,138 @@
 title: "Multivariate analysis"
 ---
 
-In this tutorial we will look at multivariate analysis.
-
-## Objectives
+In this tutorial we will look at <mark>multivariate analysis</mark>—methods that can accomodate multiple variables relating to the same observation—including <mark>cluster analysis</mark>, <mark>factor analysis</mark>, and <mark>multiple regression</mark>.
 
 ## Prerequisites
 
-## Key concepts
+None.
 
-## Foundation
+## Objectives
 
-## Extensions
+By the end of this tutorial, you should be able to:
+
+* Calculate distance and dissimilarity indexes
+* Perform hierarchical and non-hierarchical clustering
+* Perform <mark>principle components analysis</mark> (PCA) and <mark>correspondence analysis</mark>
+* Perform multiple regression
+
+## Distance and dissimilarity
+
+A common concept across many forms of multivariate analysis is the <mark>distance</mark> between observations.
+With **numerical** variables, this is analagous to measuring distances in physical space, using our data as the "coordinates".
+In physical space, we might measure distances in two dimensions (e.g. on a map) or three (e.g. with a tape measure).
+In data space, we can use as many dimensions as we want – that is, the <mark>dimensionality</mark> of the problem is defined by the number of variables we want to use.
+
+The simplest measure of distance for numerical variables is the <mark>Euclidean distance</mark>, which simply takes a straight line between a pair of observations.
+[leather.csv](data/leather.csv) contains measurements of leather objects from a Medieval site.
+We can use `dist()` (which defaults to the Euclidean distance) to measure the distance in `length`, `width` and `thickness` between each pair of objects:
+
+```{r}
+library(readr)
+
+leather <- read_csv("../data/leather.csv")
+dist(leather[,c("length", "width", "thickness")])
+```
+
+The result is a large <mark>matrix</mark> giving the distance between each pair.
+The larger the number, the more distant the two corresponding rows of the original data frame are.
+
+There are other distance measures for numerical data, notably the <mark>Chi-Square distance</mark>, <mark>Manhattan distance</mark> and <mark>Minkowski distance</mark>.
+We can control this using the `method` argument of `dist()`:
+
+```{r}
+dist(leather[,c("length", "width", "thickness")], method = "manhattan")
+```
+
+The strengths and weaknesses of these are for the most part only relevant when building more complex 'machine learning' models.
+Therefore, if you are interested in the distances in themselves, it makes sense to stick with the conceptually simple Euclidean distance.
+Otherwise, the choice of index generally depends on the type of model subsequently employed (e.g. correspondence analysis uses chi-square distances).
+
+If we have **categorical** variables, it no longer makes sense to calculate distances.
+Instead, we use the analogous concept of <mark>dissimilarity</mark> (or <mark>similarity</mark>).
+Again, there are a wide range of different methods to choose from.
+The function `vegdist()` from the [vegan](https://vegandevs.github.io/vegan/) package implements many of them.
+The most versatile is probably the <mark>Jaccard index</mark> (`method = "jaccard"`).
+
+One except is **binary** datasets (e.g. yes/no, true/false), which are common in archaeology where we want to record the presence or absence or feature or type.
+We can calculate the distance between observations in binary space using the <mark>Hamming distance</mark>, which simply counts the number of differences in each pair of observations.
+
+### Exercises
+
+1. Why doesn't it make sense to calculate the 'distance' between observations in a categorical space?
+2. Calculate the Euclidean distance between the first two objects in `leather.csv`, *without* using the `dist()` function
+3. [kurgans.csv](../data/kurgans.csv) contains information on Bronze Age burial mounds. The characteristics of the burial are encoded as categorical variables in the columns `INTERMENT` through `BODY_ORNAMENT`. Calculate an appropriate distance/dissimilarity index for this data.
+
+## Cluster analysis
+
+<mark>Clustering</mark> is the process of sorting observations into groups of minimal distance.
+
+If we don't know how many groups we want, we can use <mark>hierarchical clustering</mark>, which attempts to find the 'natural' breaks in the dataset.
+It generally tends towards "lumping" into larger groups.
+Hierarchical clustering is implemented in R as `hclust()`.
+For example, we can use it to cluster the leather objects by the Euclidean distances we calculated earlier:
+
+```{r}
+leather_distance <- dist(leather[,c("length", "width", "thickness")])
+leather_clusters <- hclust(leather_distance)
+```
+
+The easiest way to inspect the result is generally by plotting a <mark>dendrogram</mark>:
+
+```{r}
+plot(leather_clusters)
+```
+
+Often we can get better results if we specify the number of groups we want on advance – this is called <mark>non-hierarchical clustering</mark>.
+In the best case scenario, we know from the context of the data that only a certain number of groups are possible.
+For example, if we are trying to cluster a group of animals into male and female populations based on measurements of animal bones.
+Otherwise, we can try and empirically determine an 'optimal' number from a prior hierarchical clustering.
+For example, if we inspect the `height`s at which the algorithm decided to split the leather objects into groups:
+
+```{r}
+plot(rev(leather_clusters$height), type = "l")
+```
+
+We can see a distinct 'elbow' around 6, suggesting that this could be a good number of clusters to try.
+
+<mark>k-means clustering</mark> is the most common non-hierarchical clustering method, implemented in the R function `kmeans()`:
+
+```{r}
+leather_kclusters <- kmeans(leather_distance, 6)
+```
+
+There is no method for plotting k-means clustering in base R, but the [fpc](https://cran.r-project.org/web/packages/fpc/index.html) package provides one.
+
+```{r}
+library(fpc)
+plotcluster(leather[,c("length", "width")], leather_kclusters$cluster)
+```
+
+<!-- TODO: more post-analysis and visualisation of clusters, with tidyclust? -->
+
+### Exercises
+
+1. Perform a hierarchical clustering of the `kurgans.csv` data.
+2. Perform a k-means clustering of the `kurgans.csv` data.
+
+## Factor analysis
+
+<mark>Factor analysis</mark> tries to <mark>reduce the dimensionality</mark> of a dataset by finding a smaller number of <mark>factors</mark> (also known as <mark>hidden</mark> or <mark>latent variables</mark>) that account for as much as the distance between observations as possible.
+The two major families are <mark>principle components analysis</mark> (for numerical data) and <mark>(multiple) correspondence analysis</mark> (for categorical data).
+
+There are many packages that implement correspondence analysis and/or principle components analysis in R.
+We will use [dimensio](https://packages.tesselle.org/dimensio/index.html) because it has a nice interface and good documentation :)
+
+### Exercises
+
+1. Perform a correspondence analysis of the `kurgans` dataset.
+2. Generate a biplot of the results, indicating the regional groups from the original dataset.
+3. Generate plots showing which variables contributed most to the first and second dimensions. What does this tell us?
+
+## Multiple regression
+
+We can transform the regression model we worked on previously into a <mark>multiple regression</mark> very easily – simply add additional predictor variables to the formula given to `lm()`!
+
+### Exercises
+
+1. Perform a multiple regression using the `islay_lithics` data.

@@ -41,8 +41,8 @@ website:
         - section: "Modelling archaeological data"
           contents:
             - tutorials/testing.qmd
-            - tutorials/.regression.qmd
-            - tutorials/.multivariate.qmd
+            - tutorials/regression.qmd
+            - tutorials/multivariate.qmd
         - tutorials/.review.qmd
 
 format:
