@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.340">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistical Methods for Archaeological Data Analysis [FS2023] - Multivariate analysis</title>
+<title>SMADA - Multivariate analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,8 +17,42 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -30,7 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tutorials/regression.html" rel="prev">
+<link href="../tutorials/.review.qmd" rel="next">
+<link href="../tutorials/testing.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -59,6 +94,7 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script async="" src="https://umami.joeroe.io/script.js" data-website-id="d5755f67-004e-415f-8855-425405fdd537"></script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -72,213 +108,235 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Statistical Methods for Archaeological Data Analysis [FS2023]</span>
+    <span class="navbar-title">SMADA</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../info.html">
+    <a class="nav-link" href="../info.html" rel="" target="">
  <span class="menu-text">Information</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../schedule.html">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
  <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Tutorials</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../tutorials/introduction.html">
+    <a class="dropdown-item" href="../tutorials/introduction.html" rel="" target="">
  <span class="dropdown-text">Introduction</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Exploring archaeological data</li>
         <li>
-    <a class="dropdown-item" href="../tutorials/eda_with_r.html">
+    <a class="dropdown-item" href="../tutorials/eda_with_r.html" rel="" target="">
  <span class="dropdown-text">Exploring data with R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/visualising_distributions.html">
+    <a class="dropdown-item" href="../tutorials/visualising_distributions.html" rel="" target="">
  <span class="dropdown-text">Visualising distributions</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/visualising_relationships.html">
+    <a class="dropdown-item" href="../tutorials/visualising_relationships.html" rel="" target="">
  <span class="dropdown-text">Visualising relationships</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/summary_statistics.html">
+    <a class="dropdown-item" href="../tutorials/summary_statistics.html" rel="" target="">
  <span class="dropdown-text">Summary statistics</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Working with archaeological data</li>
         <li>
-    <a class="dropdown-item" href="../tutorials/tidy_data.html">
+    <a class="dropdown-item" href="../tutorials/tidy_data.html" rel="" target="">
  <span class="dropdown-text">Importing and tidying data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/workflows.html">
+    <a class="dropdown-item" href="../tutorials/workflows.html" rel="" target="">
  <span class="dropdown-text">Data analysis workflows</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/replication.html">
+    <a class="dropdown-item" href="../tutorials/replication.html" rel="" target="">
  <span class="dropdown-text">Replication Workshop</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
         <li class="dropdown-header">Modelling archaeological data</li>
         <li>
-    <a class="dropdown-item" href="../tutorials/testing.html">
+    <a class="dropdown-item" href="../tutorials/testing.html" rel="" target="">
  <span class="dropdown-text">Hypothesis testing</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/regression.html">
- <span class="dropdown-text">Regression</span></a>
+    <a class="dropdown-item" href="../tutorials/multivariate.html" rel="" target="">
+ <span class="dropdown-text">Multivariate analysis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/multivariate.html">
- <span class="dropdown-text">Multivariate analysis</span></a>
+    <a class="dropdown-item" href="../tutorials/.review.qmd" rel="" target="">
+ <span class="dropdown-text"></span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../assessment.html">
- <span class="menu-text">Assessment</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../bibliography.html">
+    <a class="nav-link" href="../bibliography.html" rel="" target="">
  <span class="menu-text">Bibliography</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Multivariate analysis</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/testing.html">Modelling archaeological data</a></li><li class="breadcrumb-item"><a href="../tutorials/multivariate.html">Multivariate analysis</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
     </div>
   </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/introduction.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="../tutorials/introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Exploring archaeological data</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Exploring archaeological data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/eda_with_r.html" class="sidebar-item-text sidebar-link">Exploring data with R</a>
+  <a href="../tutorials/eda_with_r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exploring data with R</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/visualising_distributions.html" class="sidebar-item-text sidebar-link">Visualising distributions</a>
+  <a href="../tutorials/visualising_distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visualising distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/visualising_relationships.html" class="sidebar-item-text sidebar-link">Visualising relationships</a>
+  <a href="../tutorials/visualising_relationships.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visualising relationships</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/summary_statistics.html" class="sidebar-item-text sidebar-link">Summary statistics</a>
+  <a href="../tutorials/summary_statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary statistics</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Working with archaeological data</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Working with archaeological data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tidy_data.html" class="sidebar-item-text sidebar-link">Importing and tidying data</a>
+  <a href="../tutorials/tidy_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Importing and tidying data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/workflows.html" class="sidebar-item-text sidebar-link">Data analysis workflows</a>
+  <a href="../tutorials/workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data analysis workflows</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/replication.html" class="sidebar-item-text sidebar-link">Replication Workshop</a>
+  <a href="../tutorials/replication.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Replication Workshop</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Modelling archaeological data</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Modelling archaeological data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/testing.html" class="sidebar-item-text sidebar-link">Hypothesis testing</a>
+  <a href="../tutorials/testing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hypothesis testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/regression.html" class="sidebar-item-text sidebar-link">Regression</a>
-  </div>
-</li>
+ <span class="menu-text">tutorials/regression.qmd</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/multivariate.html" class="sidebar-item-text sidebar-link active">Multivariate analysis</a>
+  <a href="../tutorials/multivariate.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Multivariate analysis</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  review.qmd
-  </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key concepts</a></li>
-  <li><a href="#foundation" id="toc-foundation" class="nav-link" data-scroll-target="#foundation">Foundation</a></li>
-  <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#distance-and-dissimilarity" id="toc-distance-and-dissimilarity" class="nav-link" data-scroll-target="#distance-and-dissimilarity">Distance and dissimilarity</a>
+  <ul class="collapse">
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  </ul></li>
+  <li><a href="#cluster-analysis" id="toc-cluster-analysis" class="nav-link" data-scroll-target="#cluster-analysis">Cluster analysis</a>
+  <ul class="collapse">
+  <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1">Exercises</a></li>
+  </ul></li>
+  <li><a href="#factor-analysis" id="toc-factor-analysis" class="nav-link" data-scroll-target="#factor-analysis">Factor analysis</a>
+  <ul class="collapse">
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2">Exercises</a></li>
+  </ul></li>
+  <li><a href="#multiple-regression" id="toc-multiple-regression" class="nav-link" data-scroll-target="#multiple-regression">Multiple regression</a>
+  <ul class="collapse">
+  <li><a href="#exercises-3" id="toc-exercises-3" class="nav-link" data-scroll-target="#exercises-3">Exercises</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/joeroe/smada/blob/main/tutorials/multivariate.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/joeroe/smada/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -287,7 +345,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Multivariate analysis</h1>
+<h1 class="title">Multivariate analysis</h1>
 </div>
 
 
@@ -302,23 +360,107 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In this tutorial we will look at multivariate analysis.</p>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-</section>
+<p>In this tutorial we will look at <mark>multivariate analysis</mark>—methods that can accomodate multiple variables relating to the same observation—including <mark>cluster analysis</mark>, <mark>factor analysis</mark>, and <mark>multiple regression</mark>.</p>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
+<p>None.</p>
 </section>
-<section id="key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="key-concepts">Key concepts</h2>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>By the end of this tutorial, you should be able to:</p>
+<ul>
+<li>Calculate distance and dissimilarity indexes</li>
+<li>Perform hierarchical and non-hierarchical clustering</li>
+<li>Perform <mark>principle components analysis</mark> (PCA) and <mark>correspondence analysis</mark></li>
+<li>Perform multiple regression</li>
+</ul>
 </section>
-<section id="foundation" class="level2">
-<h2 class="anchored" data-anchor-id="foundation">Foundation</h2>
+<section id="distance-and-dissimilarity" class="level2">
+<h2 class="anchored" data-anchor-id="distance-and-dissimilarity">Distance and dissimilarity</h2>
+<p>A common concept across many forms of multivariate analysis is the <mark>distance</mark> between observations. With <strong>numerical</strong> variables, this is analagous to measuring distances in physical space, using our data as the “coordinates”. In physical space, we might measure distances in two dimensions (e.g.&nbsp;on a map) or three (e.g.&nbsp;with a tape measure). In data space, we can use as many dimensions as we want – that is, the <mark>dimensionality</mark> of the problem is defined by the number of variables we want to use.</p>
+<p>The simplest measure of distance for numerical variables is the <mark>Euclidean distance</mark>, which simply takes a straight line between a pair of observations. <a href="data/leather.csv">leather.csv</a> contains measurements of leather objects from a Medieval site. We can use <code>dist()</code> (which defaults to the Euclidean distance) to measure the distance in <code>length</code>, <code>width</code> and <code>thickness</code> between each pair of objects:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>leather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/leather.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dist</span>(leather[,<span class="fu">c</span>(<span class="st">"length"</span>, <span class="st">"width"</span>, <span class="st">"thickness"</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The result is a large <mark>matrix</mark> giving the distance between each pair. The larger the number, the more distant the two corresponding rows of the original data frame are.</p>
+<p>There are other distance measures for numerical data, notably the <mark>Chi-Square distance</mark>, <mark>Manhattan distance</mark> and <mark>Minkowski distance</mark>. We can control this using the <code>method</code> argument of <code>dist()</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dist</span>(leather[,<span class="fu">c</span>(<span class="st">"length"</span>, <span class="st">"width"</span>, <span class="st">"thickness"</span>)], <span class="at">method =</span> <span class="st">"manhattan"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The strengths and weaknesses of these are for the most part only relevant when building more complex ‘machine learning’ models. Therefore, if you are interested in the distances in themselves, it makes sense to stick with the conceptually simple Euclidean distance. Otherwise, the choice of index generally depends on the type of model subsequently employed (e.g.&nbsp;correspondence analysis uses chi-square distances).</p>
+<p>If we have <strong>categorical</strong> variables, it no longer makes sense to calculate distances. Instead, we use the analogous concept of <mark>dissimilarity</mark> (or <mark>similarity</mark>). Again, there are a wide range of different methods to choose from. The function <code>vegdist()</code> from the <a href="https://vegandevs.github.io/vegan/">vegan</a> package implements many of them. The most versatile is probably the <mark>Jaccard index</mark> (<code>method = "jaccard"</code>).</p>
+<p>One except is <strong>binary</strong> datasets (e.g.&nbsp;yes/no, true/false), which are common in archaeology where we want to record the presence or absence or feature or type. We can calculate the distance between observations in binary space using the <mark>Hamming distance</mark>, which simply counts the number of differences in each pair of observations.</p>
+<section id="exercises" class="level3">
+<h3 class="anchored" data-anchor-id="exercises">Exercises</h3>
+<ol type="1">
+<li>Why doesn’t it make sense to calculate the ‘distance’ between observations in a categorical space?</li>
+<li>Calculate the Euclidean distance between the first two objects in <code>leather.csv</code>, <em>without</em> using the <code>dist()</code> function</li>
+<li><a href="../data/kurgans.csv">kurgans.csv</a> contains information on Bronze Age burial mounds. The characteristics of the burial are encoded as categorical variables in the columns <code>INTERMENT</code> through <code>BODY_ORNAMENT</code>. Calculate an appropriate distance/dissimilarity index for this data.</li>
+</ol>
 </section>
-<section id="extensions" class="level2">
-<h2 class="anchored" data-anchor-id="extensions">Extensions</h2>
+</section>
+<section id="cluster-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="cluster-analysis">Cluster analysis</h2>
+<p><mark>Clustering</mark> is the process of sorting observations into groups of minimal distance.</p>
+<p>If we don’t know how many groups we want, we can use <mark>hierarchical clustering</mark>, which attempts to find the ‘natural’ breaks in the dataset. It generally tends towards “lumping” into larger groups. Hierarchical clustering is implemented in R as <code>hclust()</code>. For example, we can use it to cluster the leather objects by the Euclidean distances we calculated earlier:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>leather_distance <span class="ot">&lt;-</span> <span class="fu">dist</span>(leather[,<span class="fu">c</span>(<span class="st">"length"</span>, <span class="st">"width"</span>, <span class="st">"thickness"</span>)])</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>leather_clusters <span class="ot">&lt;-</span> <span class="fu">hclust</span>(leather_distance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The easiest way to inspect the result is generally by plotting a <mark>dendrogram</mark>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(leather_clusters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Often we can get better results if we specify the number of groups we want on advance – this is called <mark>non-hierarchical clustering</mark>. In the best case scenario, we know from the context of the data that only a certain number of groups are possible. For example, if we are trying to cluster a group of animals into male and female populations based on measurements of animal bones. Otherwise, we can try and empirically determine an ‘optimal’ number from a prior hierarchical clustering. For example, if we inspect the <code>height</code>s at which the algorithm decided to split the leather objects into groups:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">rev</span>(leather_clusters<span class="sc">$</span>height), <span class="at">type =</span> <span class="st">"l"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can see a distinct ‘elbow’ around 6, suggesting that this could be a good number of clusters to try.</p>
+<p><mark>k-means clustering</mark> is the most common non-hierarchical clustering method, implemented in the R function <code>kmeans()</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>leather_kclusters <span class="ot">&lt;-</span> <span class="fu">kmeans</span>(leather_distance, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>There is no method for plotting k-means clustering in base R, but the <a href="https://cran.r-project.org/web/packages/fpc/index.html">fpc</a> package provides one.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fpc)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plotcluster</span>(leather[,<span class="fu">c</span>(<span class="st">"length"</span>, <span class="st">"width"</span>)], leather_kclusters<span class="sc">$</span>cluster)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<!-- TODO: more post-analysis and visualisation of clusters, with tidyclust? -->
+<section id="exercises-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercises-1">Exercises</h3>
+<ol type="1">
+<li>Perform a hierarchical clustering of the <code>kurgans.csv</code> data.</li>
+<li>Perform a k-means clustering of the <code>kurgans.csv</code> data.</li>
+</ol>
+</section>
+</section>
+<section id="factor-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="factor-analysis">Factor analysis</h2>
+<p><mark>Factor analysis</mark> tries to <mark>reduce the dimensionality</mark> of a dataset by finding a smaller number of <mark>factors</mark> (also known as <mark>hidden</mark> or <mark>latent variables</mark>) that account for as much as the distance between observations as possible. The two major families are <mark>principle components analysis</mark> (for numerical data) and <mark>(multiple) correspondence analysis</mark> (for categorical data).</p>
+<p>There are many packages that implement correspondence analysis and/or principle components analysis in R. We will use <a href="https://packages.tesselle.org/dimensio/index.html">dimensio</a> because it has a nice interface and good documentation :)</p>
+<section id="exercises-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercises-2">Exercises</h3>
+<ol type="1">
+<li>Perform a correspondence analysis of the <code>kurgans</code> dataset.</li>
+<li>Generate a biplot of the results, indicating the regional groups from the original dataset.</li>
+<li>Generate plots showing which variables contributed most to the first and second dimensions. What does this tell us?</li>
+</ol>
+</section>
+</section>
+<section id="multiple-regression" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-regression">Multiple regression</h2>
+<p>We can transform the regression model we worked on previously into a <mark>multiple regression</mark> very easily – simply add additional predictor variables to the formula given to <code>lm()</code>!</p>
+<section id="exercises-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercises-3">Exercises</h3>
+<ol type="1">
+<li>Perform a multiple regression using the <code>islay_lithics</code> data.</li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -349,9 +491,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -416,6 +572,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -457,11 +699,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../tutorials/regression.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Regression</span>
+      <a href="../tutorials/testing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hypothesis testing</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../tutorials/.review.qmd" class="pagination-link">
+        <span class="nav-page-text"></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

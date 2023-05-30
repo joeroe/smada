@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://smada.joeroe.io/info.html</loc>
-    <lastmod>2023-05-23T08:42:59.334Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/summary_statistics.html</loc>
-    <lastmod>2023-05-23T08:43:03.277Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/regression.html</loc>
-    <lastmod>2023-05-23T08:43:12.424Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/visualising_distributions.html</loc>
-    <lastmod>2023-05-23T08:43:17.954Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/eda_with_r.html</loc>
-    <lastmod>2023-05-23T08:43:20.188Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/replication.html</loc>
-    <lastmod>2023-05-23T08:43:20.708Z</lastmod>
-  </url>
-  <url>
-    <loc>https://smada.joeroe.io/tutorials/testing.html</loc>
-    <lastmod>2023-05-23T08:43:25.318Z</lastmod>
+    <loc>https://smada.joeroe.io/index.html</loc>
+    <lastmod>2023-05-30T10:03:33.552Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/tutorials/introduction.html</loc>
-    <lastmod>2023-05-23T08:43:25.705Z</lastmod>
+    <lastmod>2023-05-30T10:03:33.736Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/tutorials/workflows.html</loc>
-    <lastmod>2023-05-23T08:43:26.208Z</lastmod>
+    <lastmod>2023-05-30T10:03:33.906Z</lastmod>
   </url>
   <url>
-    <loc>https://smada.joeroe.io/tutorials/visualising_relationships.html</loc>
-    <lastmod>2023-05-23T08:43:28.218Z</lastmod>
+    <loc>https://smada.joeroe.io/tutorials/eda_with_r.html</loc>
+    <lastmod>2023-05-30T10:03:34.992Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/tutorials/tidy_data.html</loc>
-    <lastmod>2023-05-23T08:43:34.252Z</lastmod>
+    <lastmod>2023-05-30T10:03:37.556Z</lastmod>
   </url>
   <url>
-    <loc>https://smada.joeroe.io/bibliography.html</loc>
-    <lastmod>2023-05-23T08:43:34.628Z</lastmod>
+    <loc>https://smada.joeroe.io/tutorials/multivariate.html</loc>
+    <lastmod>2023-05-30T10:03:39.259Z</lastmod>
   </url>
   <url>
-    <loc>https://smada.joeroe.io/index.html</loc>
-    <lastmod>2023-05-23T08:43:35.155Z</lastmod>
+    <loc>https://smada.joeroe.io/tutorials/testing.html</loc>
+    <lastmod>2023-05-30T10:03:41.459Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/tutorials/summary_statistics.html</loc>
+    <lastmod>2023-05-30T10:03:43.496Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/tutorials/visualising_distributions.html</loc>
+    <lastmod>2023-05-30T10:03:45.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/tutorials/visualising_relationships.html</loc>
+    <lastmod>2023-05-30T10:03:46.536Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/tutorials/replication.html</loc>
+    <lastmod>2023-05-30T10:03:46.753Z</lastmod>
   </url>
   <url>
     <loc>https://smada.joeroe.io/schedule.html</loc>
-    <lastmod>2023-05-23T08:43:35.678Z</lastmod>
+    <lastmod>2023-05-30T10:03:46.969Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/bibliography.html</loc>
+    <lastmod>2023-05-30T10:03:47.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://smada.joeroe.io/info.html</loc>
+    <lastmod>2023-05-30T10:03:47.326Z</lastmod>
   </url>
 </urlset>
