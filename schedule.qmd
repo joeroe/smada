@@ -19,7 +19,7 @@ title: "Schedule"
 |      | **Modelling archaeological data**                |
 | 19   | [Hypothesis testing](tutorials/testing.qmd)               | {{< fa book >}} *Quantifying Archaeology*, [ch. 5](https://doi.org/10.1515/9781474472555-006) & [ch. 6](https://doi.org/10.1515/9781474472555-007)           |
 | 20    | ---                            | --- |
-| 21*   | Regression                       | {{< fa book >}} *Quantifying Archaeology*, [ch. 8](https://doi.org/10.1515/9781474472555-009) & [ch. 9](https://doi.org/10.1515/9781474472555-010)           |
-| 22  | Multivariate analysis            | ---           |
+| 21*   | [Regression](tutorials/regression.qmd)                       | {{< fa book >}} *Quantifying Archaeology*, [ch. 8](https://doi.org/10.1515/9781474472555-009) & [ch. 9](https://doi.org/10.1515/9781474472555-010)           |
+| 22  | [Multivariate analysis](tutorials/multivariate.qmd)            | ---           |
 
 \* Substitute instructor
